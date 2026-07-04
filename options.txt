@@ -16,13 +16,13 @@ fullscreen:false
 gamma:0.0
 graphicsMode:1
 guiScale:4
-maxFps:120
+maxFps:260
 mipmapLevels:1
 narrator:0
 particles:2
 reducedDebugInfo:false
 renderClouds:"false"
-renderDistance:12
+renderDistance:8
 simulationDistance:6
 screenEffectScale:0.3732394366197183
 soundDevice:""
@@ -48,8 +48,8 @@ mouseSensitivity:0.5
 damageTiltStrength:1.0
 highContrast:false
 narratorHotkey:true
-resourcePacks:["vanilla","fabric","mod_resources","moonlight:merged_pack","builtin/add_pack_finders_test","scholar:colored_books","scholar:chiseled_bookshelf_colored_books","file/Fancy Crops v1.3.zip","file/crops-3d(2).zip","file/Muskets 3D Wild West для Ewewkek\u0027s.zip","file/§bArmor§8-§bReimagined§0_§8[v1.1]§0.zip","file/Quark VRO.zip","file/Better Chainmail Armor.zip","file/CoffeeGUI_1.20.2-26.1_release_v2.1.1.zip","file/ModdedCoffeeGUI_Release_v1.0.8.zip","file/alpha_sounds_1.20.2-1.14.zip","file/C4Music_v4.3.zip","file/-1.21.2 Fresh Moves v3.1 (No Animated Eyes).zip","file/Xbox 360 Advancement SFX.zip","file/3dMase.zip","file/Gentler Weather Sounds 2.2.0.zip","file/Leather Robes - 1.21.1.zip","file/BetterExp.zip","file/Expanded Entity Armor Model.zip","file/§3Fresh §bWeapons \u0026 Tools.zip"]
-incompatibleResourcePacks:["file/crops-3d(2).zip","file/alpha_sounds_1.20.2-1.14.zip","file/3dMase.zip","file/BetterExp.zip","file/Expanded Entity Armor Model.zip"]
+resourcePacks:["vanilla","fabric","mod_resources","moonlight:merged_pack","file/Muskets 3D Wild West для Ewewkek\u0027s.zip","file/ModdedCoffeeGUI_Release_v1.0.8.zip","file/§bArmor§8-§bReimagined§0_§8[v1.1]§0.zip","file/Quark VRO.zip","file/Fancy Crops v1.3.zip","file/crops-3d(2).zip","file/CoffeeGUI_1.20.2-26.1_release_v2.1.1.zip","file/Better Chainmail Armor.zip","file/-1.21.2 Fresh Moves v3.1 (No Animated Eyes).zip","file/§3Fresh §bWeapons \u0026 Tools.zip","file/C4Music_v4.3.zip","file/3dMase.zip","file/Xbox 360 Advancement SFX.zip","builtin/add_pack_finders_test","file/BetterExp.zip","file/alpha_sounds_1.20.2-1.14.zip","file/Gentler Weather Sounds 2.2.0.zip"]
+incompatibleResourcePacks:["file/crops-3d(2).zip","file/3dMase.zip","file/BetterExp.zip","file/alpha_sounds_1.20.2-1.14.zip"]
 lastServer:
 lang:en_us
 chatVisibility:0
@@ -131,10 +131,10 @@ key_zume.zoom:key.keyboard.z
 key_zume.zoom_in:key.keyboard.equal
 key_zume.zoom_out:key.keyboard.minus
 key_key.exposure.camera_controls:key.keyboard.unknown
-key_supplementaries.keybind.quiver:key.keyboard.v
 key_quark.keybind.autorun:key.keyboard.unknown
 key_quark.keybind.back:key.mouse.4
 key_quark.keybind.camera_mode:key.keyboard.f12
+key_supplementaries.keybind.quiver:key.keyboard.v
 key_quark.keybind.transfer_insert:key.keyboard.unknown
 key_quark.keybind.transfer_extract:key.keyboard.unknown
 key_quark.keybind.shift_lock:key.keyboard.unknown
@@ -192,8 +192,10 @@ key_treechop.key.cycle_sneak_behavior:key.keyboard.unknown
 key_treechop.key.open_settings_overlay:key.keyboard.unknown
 key_key.goodoldachievements.get_taking_inv_advancement_key:key.keyboard.e
 key_key.carry.desc:key.keyboard.unknown
+key_mapfrontiers.key.open_settings:key.keyboard.f8
 key_key.travelertoolbelt.open_toolbelt:key.keyboard.y
 key_Inspect Key:key.keyboard.j
+key_key.calmtheleaks.panel:key.keyboard.f8
 key_key.simple_music_control.next_music_track:key.keyboard.unknown
 key_key.simple_music_control.toggle_music:key.keyboard.unknown
 key_key.do_a_barrel_roll.toggle_enabled:key.keyboard.unknown
@@ -208,6 +210,28 @@ key_key.do_a_barrel_roll.roll_right:key.keyboard.unknown
 key_key.do_a_barrel_roll.thrust_forward:key.keyboard.w
 key_key.do_a_barrel_roll.thrust_backward:key.keyboard.unknown
 key_key.kubejs.kubedex:key.keyboard.unknown
+key_key.journeymap.minimap_preset:key.keyboard.backslash
+key_key.journeymap.toggle_entity_names:key.keyboard.g
+key_key.journeymap.toggle_render_waypoints_map:key.keyboard.unknown
+key_key.journeymap.fullscreen.south:key.keyboard.down
+key_key.journeymap.zoom_in:key.keyboard.equal
+key_key.journeymap.fullscreen.north:key.keyboard.up
+key_key.journeymap.fullscreen_waypoints:key.keyboard.n
+key_key.journeymap.toggle_render_waypoints_world:key.keyboard.unknown
+key_key.journeymap.fullscreen.east:key.keyboard.right
+key_key.journeymap.zoom_out:key.keyboard.minus
+key_key.journeymap.create_waypoint:key.keyboard.b
+key_key.journeymap.fullscreen.disable_buttons:key.keyboard.unknown
+key_key.journeymap.minimap_type:key.keyboard.left.bracket
+key_key.journeymap.fullscreen_create_waypoint:key.keyboard.b
+key_key.journeymap.fullscreen.west:key.keyboard.left
+key_key.journeymap.toggle_waypoints:key.keyboard.unknown
+key_key.journeymap.fullscreen_chat_position:key.keyboard.c
+key_key.journeymap.map_toggle_alt:key.keyboard.j
+key_key.journeymap.toggle_render_waypoints:key.keyboard.unknown
+key_key.journeymap.minimap_toggle_alt:key.keyboard.j:CONTROL
+key_key.journeymap.fullscreen_options:key.keyboard.o
+key_key.journeymap.fullscreen_follow_player:key.keyboard.f
 key_artifacts.key.helium_flamingo.activate:key.keyboard.unknown
 key_artifacts.key.charm_of_shrinking.toggle:key.keyboard.unknown
 key_artifacts.key.charm_of_sinking.toggle:key.keyboard.unknown

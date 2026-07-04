@@ -39,7 +39,3 @@
 		"Slowdown only" = true
 		#If true, player's sprinting jump impulse will be reduced based off slowdown (basically, when you have 0 movement speed, if this is true, you can no longer jump forward while sprinting).
 		"Sprinting jump slowdown" = true
-
-#Set and use some tags to get and set some mobs properties. E.g. cause fire explosion for mobs, or get current light level.
-[Tags]
-	"Apply no ammo consumption to pillagers" = false

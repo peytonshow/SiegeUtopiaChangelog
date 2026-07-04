@@ -68,7 +68,6 @@ StartupEvents.registry('fluid', event => {
       .flowingTexture('kubejs:block/gas_flow')
       .fallDistanceModifier(0)
     )
-    .noBlock()
     .bucketItem.texture('utopia:item/bleach')
 
   event.create('utopia:propylene_glycol')

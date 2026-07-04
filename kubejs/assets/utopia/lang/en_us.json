@@ -14,7 +14,7 @@
   "utopia.info.catalyst": "Catalysts contain special living compounds that react with certain surrounding minerals on its surface.",//nf
   "utopia.info.tumbling": "Amethysts can be used to produce minerals through a process called tumbling. They slowly grind away rock to dust, which is absorbed by water and drained, leaving only metal or gems.",//nf
   "utopia.info.fluid": "Infinite fluid can be achieved by using a Spout to suck up water from a a source",//nf
-  "utopia.info.platinum": "Platinum is an extremely rare resource, even rarer than gold, and can be used as a catalyst for chemistry.",
+  "utopia.info.platinum": "Platinum is an extremely rare resource, even rarer than gold. You wont find any underground, but you can occasionally wash up some specs from blowing gold. Platinum isn't practicle for tools, but it's a perfect catalyst for certain chemical reactions.",
   "farmersdelight.tooltip.cooking_pot.empty": "Empty",
   "block.minecraft.blast_furnace": "Kiln",
   "container.blast_furnace": "Kiln",
@@ -34,5 +34,11 @@
   "advancements.utop.sticky_situation.title": "Glue!",
   "advancements.utop.sticky_situation.description": "Eat Glue. My favorite tube!",
   "advancements.utop.almost_diamond.title": "Hexagonal Silicon Carbides!",
-  "advancements.utop.almost_diamond.description": "Make artificial Diamonds using Science"
+  "advancements.utop.almost_diamond.description": "Make artificial Diamonds using Science",
+  "advancements.utop.my_king.title": "My King!",
+  "advancements.utop.my_king.description": "Pick up the Crown",
+  "advancements.utop.obviously_harmful_chemical.title": "Chug Drug",
+  "advancements.utop.obviously_harmful_chemical.description": "Drink chemicals",
+  "advancements.utop.rapid_cell_decay.title": "Rapid Cell Decay",
+  "advancements.utop.rapid_cell_decay.description": "Drink an extremely dangerous chemical"
 }

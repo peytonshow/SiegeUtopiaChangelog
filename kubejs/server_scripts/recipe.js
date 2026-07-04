@@ -6,6 +6,8 @@ ServerEvents.recipes(event => {
     event.remove({ output: 'minecraft:paper', type: 'minecraft:crafting_shapeless' })
     event.remove({ output: 'minecraft:glass_bottle', type: 'minecraft:crafting_shaped' })
     event.remove({ output: 'minecraft:gold_nugget', type: 'create:splashing' })
+    event.remove({ output: 'minecraft:mushroom_stew', type: 'minecraft:crafting_shapeless' })
+    event.remove({ output: 'minecraft:beetroot_soup', type: 'minecraft:crafting_shapeless' })
     //////
 
     event.shaped(
@@ -13,6 +15,42 @@ ServerEvents.recipes(event => {
             'A  ',
             'A  ',
             'B  '
+        ],{
+            A: 'utopia:platinum_ingot',
+            B: 'minecraft:stick'
+    })
+    event.shaped(
+        Item.of('utopia:platinum_axe'),[
+            'AA ',
+            'AB ',
+            ' B '
+        ],{
+            A: 'utopia:platinum_ingot',
+            B: 'minecraft:stick'
+    })
+    event.shaped(
+        Item.of('utopia:platinum_pickaxe'),[
+            'AAA',
+            ' B ',
+            ' B '
+        ],{
+            A: 'utopia:platinum_ingot',
+            B: 'minecraft:stick'
+    })
+    event.shaped(
+        Item.of('utopia:platinum_hoe'),[
+            'AA ',
+            ' B ',
+            ' B '
+        ],{
+            A: '#utopia:platinum',
+            B: 'minecraft:stick'
+    })
+    event.shaped(
+        Item.of('utopia:platinum_shovel'),[
+            ' A ',
+            ' B ',
+            ' B '
         ],{
             A: 'utopia:platinum_ingot',
             B: 'minecraft:stick'
@@ -27,6 +65,15 @@ ServerEvents.recipes(event => {
             A: '#minecraft:wooden_slabs',
             B: 'utopia:beaker'
     })
+
+
+    // Shapeless
+    event.shapeless(
+        Item.of('minecraft:gunpowder', 1),[
+            'utopia:pure_sulfur',
+            'minecraft:coal',
+            'utopia:ammonium_nitrate'
+        ])
 
     //////
     event.recipes.create.mixing('create:brass_ingot', [
@@ -105,24 +152,22 @@ ServerEvents.recipes(event => {
 
     // Gunpowder
     event.recipes.create.mixing([
-        CreateItem.of('4x minecraft:gunpowder', 0.35),
-        CreateItem.of('3x minecraft:gunpowder', 0.5),
-        CreateItem.of('2x minecraft:gunpowder', 0.6),
+        CreateItem.of('3x minecraft:gunpowder', 0.85),
+        CreateItem.of('2x minecraft:gunpowder')
     ], [
         '8x minecraft:sugar',
-        Ingredient.of('#minecraft:coals')
+        'minecraft:coal'
     ]).heated()
 
 
     // Spices    
     event.recipes.create.milling([
-        CreateItem.of('2x utopia:pepper', 0.20),
-        CreateItem.of('utopia:pepper', 0.40)], [
+        CreateItem.of('utopia:pepper')], [
         'minecraft:blackstone'
     ])
     event.recipes.create.milling([
-        CreateItem.of('2x utopia:sea_salt', 0.10),
-        CreateItem.of('utopia:sea_salt', 0.60)], [
+        CreateItem.of('utopia:sea_salt'),
+        CreateItem.of('2x utopia:sea_salt', 0.60)], [
         'minecraft:calcite'
     ])
     Ingredient.of('#utopia:spices').stacks.forEach(item => {
@@ -187,6 +232,7 @@ ServerEvents.recipes(event => {
     // Chemistry!!!
     const beakers = [
         { full: 'utopia:beaker_nitrogen', empty: 'utopia:beaker', fluid: 'utopia:liquid_nitrogen', amount: 200 },
+        { full: 'utopia:beaker_nitrogen', empty: 'utopia:beaker', fluid: 'utopia:liquid_nitrogen', amount: 200 },
         { full: 'utopia:beaker_oxygen', empty: 'utopia:beaker', fluid: 'utopia:liquid_oxygen', amount: 200 },
         { full: 'utopia:beaker_hydrogen', empty: 'utopia:beaker', fluid: 'utopia:liquid_hydrogen', amount: 200 },
         { full: 'utopia:beaker_ammonia', empty: 'utopia:beaker', fluid: 'utopia:ammonia', amount: 200 },
@@ -200,29 +246,86 @@ ServerEvents.recipes(event => {
         event.recipes.create.filling(item.full, [Fluid.of(item.fluid, item.amount), item.empty]);
     }
 
+    event.recipes.create.compacting([
+        'minecraft:glass_bottle',
+        Fluid.of('utopia:liquid_nitrogen', 50),
+    ], [
+        'quark:bottled_cloud',
+    ])
     event.recipes.create.mixing([
         Fluid.of('utopia:propylene_glycol', 100)
     ], [
-        Ingredient.of('#minecraft:coals'),
+        'minecraft:coal',
         Fluid.of('utopia:liquid_hydrogen', 80),
         Fluid.of('utopia:liquid_oxygen', 20)
     ]).superheated()
-
     event.recipes.create.mixing([
         Fluid.of('utopia:liquid_oxygen', 80),
         Fluid.of('utopia:liquid_hydrogen', 120)
     ], [
-        Fluid.of('minecraft:water', 200),'create:experience_nugget'
+        Fluid.of('minecraft:water', 200),
+        Ingredient.of('#utopia:electricity')
+    ]).heated()
+    event.recipes.create.mixing([
+        'utopia:ammonium_nitrate'
+    ], [
+        Fluid.of('utopia:ammonia', 500),
+        Fluid.of('utopia:nitric_acid', 500)
     ]).heated()
 
-    
-    // Neon
+    event.recipes.create.mixing([
+        Fluid.of('utopia:nitric_acid', 200)
+    ], [
+        Fluid.of('utopia:liquid_nitrogen', 200),
+        Fluid.of('minecraft:water', 500)
+    ])
     event.recipes.create.compacting([
-        CreateItem.of('utopia:neon_block', 0.85),
+        CreateItem.of('utopia:neon_block', 0.15),
+        '16x minecraft:glass_bottle'
     ], [
         '16x quark:bottled_cloud',
-        '8x minecraft:blue_ice',
-        '8x minecraft:glow_ink_sac'
+        Fluid.of('utopia:propylene_glycol', 100)
+    ]).processingTime(6000)
+    event.recipes.create.mixing([
+        Fluid.of('utopia:bleach', 200)
+    ], [
+        'utopia:sea_salt',
+        Fluid.of('minecraft:water', 200),
+        Ingredient.of('#utopia:electricity')
+    ]).heated().processingTime(140)
+    event.recipes.create.mixing([
+        Fluid.of('utopia:ammonia', 400)
+    ], [
+        Fluid.of('utopia:liquid_nitrogen', 200),
+        Fluid.of('utopia:liquid_hydrogen', 200)
+    ]).heated()
+    event.recipes.create.mixing([
+        Fluid.of('utopia:ammonia', 400),
+        'utopia:tarnished_platinum_ingot'
+    ], [
+        Fluid.of('utopia:nitric_acid', 200),
+        Fluid.of('utopia:liquid_oxygen', 200),
+        'utopia:platinum_ingot'
+    ]).heated().processingTime(600)
+    event.recipes.create.compacting([
+        '1x quark:bottled_cloud',
+        'minecraft:heart_of_the_sea'
+    ], [
+        'minecraft:glass_bottle',
+        'minecraft:heart_of_the_sea'
+    ]).heated()
+    event.recipes.create.crushing([
+        '3x utopia:pure_sulfur'
+    ], [
+        'minecraft:potent_sulfur'
+    ])
+
+    // Exp Farm
+    event.recipes.create.compacting([
+        CreateItem.of('create:experience_nugget', 0.75),
+        '4x minecraft:stone_bricks'
+    ], [
+        '4x minecraft:infested_stone'
     ])
 
     // Gold + Platinum
@@ -233,8 +336,13 @@ ServerEvents.recipes(event => {
     ], [
         'create:crushed_raw_gold'
     ])
+    event.recipes.create.splashing([
+        'utopia:platinum_ingot'
+    ], [
+        'utopia:tarnished_platinum_ingot'
+    ])
 
-
+    
 
     // Remove crushing for milled-only items
     event.remove({ output: 'utopia:sea_salt', type: 'create:crush' })

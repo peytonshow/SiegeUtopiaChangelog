@@ -36,19 +36,25 @@ StartupEvents.registry('item', event => {
     event.create('utopia:silica_dust').displayName('Silica Dust').texture('utopia:item/silica').tag('c:dusts').tag('utopia:chemistry')
     event.create('utopia:moissanite').displayName('Moissanite').texture('utopia:item/moissanite').tag('c:gems').tag('utopia:chemistry')
     event.create('utopia:beaker').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/beaker').displayName('Empty Beaker')
-    event.create('utopia:beaker_oxygen').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/beaker_oxygen').useAnimation('drink')
-    event.create('utopia:beaker_hydrogen').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/beaker_hydrogen')
-    event.create('utopia:beaker_nitrogen').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/beaker_nitrogen').useAnimation('drink')
-    event.create('utopia:beaker_ammonia').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/beaker_ammonia').useAnimation('drink')
-    event.create('utopia:beaker_nitric_acid').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/beaker_nitric_acid').useAnimation('drink')
+    event.create('utopia:beaker_oxygen').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/beaker_oxygen').displayName('Beaker of Oxygen').useAnimation('drink')
+    event.create('utopia:beaker_hydrogen').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/beaker_hydrogen').displayName('Beaker of Hydrogen').useAnimation('drink')
+    event.create('utopia:beaker_nitrogen').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/beaker_nitrogen').displayName('Beaker of Nitrogen').useAnimation('drink')
+    event.create('utopia:beaker_ammonia').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/beaker_ammonia').displayName('Ammonia').useAnimation('drink')
+    event.create('utopia:beaker_nitric_acid').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/beaker_nitric_acid').displayName('Beaker of Nitric Acid').useAnimation('drink')
     event.create('utopia:beaker_bleach').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/bleach').displayName('Bleach').useAnimation('drink')
     event.create('utopia:beaker_propylene_glycol').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/propylene_glycol').displayName('Propylene Glycol').useAnimation('drink')
+    event.create('utopia:ammonium_nitrate').tag('utopia:chemistry').texture('utopia:item/ammonium_nitrate').displayName('Ammonium Nitrate').useAnimation('drink')
+    event.create('utopia:pure_sulfur').tag('utopia:chemistry').texture('utopia:item/sulphur').displayName('Pure Sulfur')
+
+    // Electricity
+    //event.create('utopia:battery_charged').displayName('Graphite').texture('utopia:item/graphite_ingot')
 
     // Ingots
     event.create('utopia:graphite_ingot').displayName('Graphite').texture('utopia:item/graphite_ingot')
     event.create('utopia:graphite_nugget').displayName('Graphite Rod').texture('utopia:item/graphite_nugget')
     event.create('utopia:platinum_ingot').displayName('Platinum Ingot').texture('utopia:item/platinum_ingot')
     event.create('utopia:platinum_nugget').displayName('Platinum Nugget').texture('utopia:item/platinum_nugget')
+    event.create('utopia:tarnished_platinum_ingot').displayName('Tarnished Platinum Ingot').texture('utopia:item/tarnished_platinum_ingot')
 
     // Copper tools.
     event.create('minecraft:copper_sword', 'sword').tier('stone').maxDamage(100)
@@ -152,7 +158,7 @@ event.create('utopia:moissanite_block')
     .resistance(5)
 
   event.create('utopia:neon_block') 
-    .displayName('Neon Block')
+    .displayName('Neon')
     .soundType('heavy_core') 
     .resistance(1)
 

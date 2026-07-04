@@ -1,6 +1,15 @@
 ItemEvents.modifyTooltips(event => {
     // The message displayed when Shift is not held
-    const shiftMessage = Text.of('Hold Shift to see more info.').gold();
+    const  shiftMessage = Text.join([
+        Text.of('Hold [').darkGray(),
+        Text.of('Shift').gray(),
+        Text.of('] for Summary').darkGray()
+    ]);
+    const  heldShiftMessage = Text.join([
+        Text.of('Hold [').darkGray(),
+        Text.of('Shift').gray(),
+        Text.of('] for Summary').darkGray()
+    ]);
 
     // 1. Helper function for LONG descriptions (requires Shift)
     const addShiftTooltip = (itemFilter, tooltipText) => {
@@ -11,7 +20,9 @@ ItemEvents.modifyTooltips(event => {
 
         // Triggered only when Shift IS held
         event.modify(itemFilter, { shift: true }, text => {
-            text.insert(1, Text.of(tooltipText).gray());
+            text.insert(1, heldShiftMessage);
+            text.insert(2, '')
+            text.insert(3, Text.of(tooltipText).yellow());
         });
     };
 
@@ -32,6 +43,15 @@ ItemEvents.modifyTooltips(event => {
     addShiftTooltip('utopia:encoder_stamp', 'Used to split material into Minted Coins.'); 
     addShiftTooltip('utopia:decoder_stamp', 'Used to turn Minted Coins into material without loss.'); 
     addShiftTooltip('utopia:paper_stamp', 'Used to print any denomination Paper Money. Use sparingly!'); 
+
+    // --- Chemistry ---
+    addShiftTooltip('utopia:beaker_oxygen', "It feels completely empty, and doesn't smell."); 
+    addShiftTooltip('utopia:beaker_hydrogen', "It feels really cold, and doesn't smell."); 
+    addShiftTooltip('utopia:beaker_nitrogen', "It's almost invisible, but it feels cold to the touch."); 
+    addShiftTooltip('utopia:beaker_ammonia', "It has a sharp, pungent smell."); 
+    addShiftTooltip('utopia:beaker_nitric_acid', "Smells awful. I really wouldn't touch this."); 
+    addShiftTooltip('utopia:beaker_bleach', "Touching it causes soap bubbles to appear on your hand."); 
+    addShiftTooltip('utopia:beaker_propylene_glycol', "It looks thick and oily. Smells weirdly sweet."); 
 
     // --- FIAT Bills (Grouped) ---
     addShiftTooltip([

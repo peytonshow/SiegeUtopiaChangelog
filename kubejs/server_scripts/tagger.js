@@ -79,6 +79,11 @@ ServerEvents.tags('item', event => {
 
     event.add('create:pulpifiable', 'farmersdelight:tree_bark')
     event.add('create:upright_on_belt', '#utopia:beakers')
+
+    event.add('utopia:platinum', 'utopia:platinum_ingot')
+    event.add('utopia:platinum', 'utopia:tarnished_platinum_ingot')
+
+    event.add('utopia:electricity', 'create:experience_nugget')
     //event.add('create:upright_on_belt', '#c:dusts')
 
     event.remove('minecraft:needs_stone_tool', 'quark:sturdy_stone')

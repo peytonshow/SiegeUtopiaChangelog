@@ -221,6 +221,7 @@ ItemEvents.modification(event => {
     // Chemicals
     event.modify('utopia:beaker_nitric_acid', item => {
         item.setFood({
+            usingConvertsTo: 'utopia:beaker',
             eatSeconds: 1.6,
             saturation: 0,
             nutrition: 1,
@@ -230,14 +231,14 @@ ItemEvents.modification(event => {
                     probability: 1.0, // Any real number between 0 and 1
                     effectSupplier: () =>
                     new $MobEffectInstance(
-                        'minecraft:poison', 20, 5,false,false
+                        'minecraft:poison', 200, 5,false,false
                     ),
                 },
                 {
                     probability: 1.0, // Any real number between 0 and 1
                     effectSupplier: () =>
                     new $MobEffectInstance(
-                        'minecraft:wither', 80, 2,false,true
+                        'minecraft:wither', 800, 2,false,true
                     ),
                 }
             ]
@@ -245,6 +246,7 @@ ItemEvents.modification(event => {
     })
     event.modify('utopia:beaker_oxygen', item => {
         item.setFood({
+            usingConvertsTo: 'utopia:beaker',
             eatSeconds: 1.6,
             saturation: 0,
             nutrition: 1,
@@ -254,7 +256,14 @@ ItemEvents.modification(event => {
                     probability: 1.0, // Any real number between 0 and 1
                     effectSupplier: () =>
                     new $MobEffectInstance(
-                        'supplementaries:flammable', 60, 0,false,true
+                        'supplementaries:flammable', 1200, 0,false,true
+                    ),
+                },
+                {
+                    probability: 1.0, // Any real number between 0 and 1
+                    effectSupplier: () =>
+                    new $MobEffectInstance(
+                        'minecraft:water_breathing', 300, 0,false,true
                     ),
                 }
             ]
@@ -262,6 +271,7 @@ ItemEvents.modification(event => {
     })
     event.modify('utopia:beaker_ammonia', item => {
         item.setFood({
+            usingConvertsTo: 'utopia:beaker',
             eatSeconds: 1.6,
             saturation: 0,
             nutrition: 1,
@@ -271,7 +281,7 @@ ItemEvents.modification(event => {
                     probability: 1.0, // Any real number between 0 and 1
                     effectSupplier: () =>
                     new $MobEffectInstance(
-                        'minecraft:weakness', 120, 0,false,true
+                        'minecraft:weakness', 1200, 0,false,true
                     ),
                 }
             ]
@@ -279,6 +289,7 @@ ItemEvents.modification(event => {
     })
     event.modify('utopia:beaker_nitrogen', item => {
         item.setFood({
+            usingConvertsTo: 'utopia:beaker',
             eatSeconds: 1.6,
             saturation: 0,
             nutrition: 1,
@@ -288,7 +299,7 @@ ItemEvents.modification(event => {
                     probability: 1.0, // Any real number between 0 and 1
                     effectSupplier: () =>
                     new $MobEffectInstance(
-                        'oreganized:lung_damage', 60, 0,false,true
+                        'oreganized:lung_damage', 600, 0,false,true
                     ),
                 }
             ]
@@ -296,6 +307,7 @@ ItemEvents.modification(event => {
     })
     event.modify('utopia:beaker_ammonia', item => {
         item.setFood({
+            usingConvertsTo: 'utopia:beaker',
             eatSeconds: 1.6,
             saturation: 0,
             nutrition: 1,
@@ -305,7 +317,7 @@ ItemEvents.modification(event => {
                     probability: 1.0, // Any real number between 0 and 1
                     effectSupplier: () =>
                     new $MobEffectInstance(
-                        'oreganized:lung_damage', 120, 0,false,true
+                        'oreganized:lung_damage', 1200, 0,false,true
                     ),
                 }
             ]
@@ -313,6 +325,7 @@ ItemEvents.modification(event => {
     })
     event.modify('utopia:beaker_bleach', item => {
         item.setFood({
+            usingConvertsTo: 'utopia:beaker',
             eatSeconds: 1.6,
             saturation: 0,
             nutrition: 1,
@@ -322,31 +335,40 @@ ItemEvents.modification(event => {
                     probability: 1.0, // Any real number between 0 and 1
                     effectSupplier: () =>
                     new $MobEffectInstance(
-                        'minecraft:poison', 120, 1,false,false
+                        'minecraft:poison', 1200, 1,false,false
                     ),
                 },
                 {
                     probability: 1.0, // Any real number between 0 and 1
                     effectSupplier: () =>
                     new $MobEffectInstance(
-                        'minecraft:wither', 180, 0,false,true
+                        'minecraft:wither', 1800, 0,false,true
                     ),
                 },
                 {
                     probability: 1.0, // Any real number between 0 and 1
                     effectSupplier: () =>
                     new $MobEffectInstance(
-                        'minecraft:weakness', 120, 0,false,true
+                        'minecraft:weakness', 1200, 0,false,true
                     ),
                 },
                 {
                     probability: 1.0, // Any real number between 0 and 1
                     effectSupplier: () =>
                     new $MobEffectInstance(
-                        'oreganized:lung_damage', 120, 0,false,true
+                        'oreganized:lung_damage', 1200, 0,false,true
                     ),
                 }
             ]
+        })
+    })
+    event.modify('utopia:beaker_propylene_glycol', item => {
+        item.setFood({
+            usingConvertsTo: 'utopia:beaker',
+            eatSeconds: 1.6,
+            saturation: 3,
+            nutrition: 2,
+            canAlwaysEat: true
         })
     })
 })

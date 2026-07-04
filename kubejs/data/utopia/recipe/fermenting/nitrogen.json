@@ -1,0 +1,22 @@
+{
+  "type": "brewinandchewin:fermenting",
+  "category": "meals",
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "minecraft:rotten_flesh"
+    },
+    {
+      "item": "minecraft:rotten_flesh"
+    },
+    {
+      "item": "utopia:beaker"
+    }
+    []
+  ],
+  "result": {
+    "count": 1,
+    "id": "utopia:beaker_nitrogen"
+  },
+  "temperature": 4
+}
