@@ -6,7 +6,7 @@ GOALS
 * Automation and logistics are important. Automation shouldn't produce infinite resources from nothing (with a few exceptions).
 * Strong performance on all systems. And additional client is available with less fluff.
 * Built for multiplayer, with the goal of reducing individualist self-sustainment in exchange for player interaction build upon specialization and necessity. 
-* Offer players the tools to build society, featuring a Coronation mechanic as well as minting currency.
+* Offer players the tools to build society through currency, deals, and governing.
 
 ---------------------------------------------------------------------------------------------------------------
 
@@ -24,15 +24,15 @@ TRADING
 * Villager trades have been reworked completely. Villagers use Comfort to determine prices rather than reputation. Villagers each have their own role in simulating an actual economy depending on their profession.
     * Seller Types. Only used for earning emeralds. Very profitable, has increased payout per volume.
         - Farmer - Buy Crop Crates. D
-        - Butcher - Buys Raw, Cut and Cooked Meat.
-        - Shepherd - Buys Wool, Banners and Beds.
-        - Fisherman - Buy fish
+        - Butcher - Buys Raw, Cut and Cooked Meat (up to stews and meals).
+        - Shepherd - Buys Wool, Banners and Beds, Seats and other furniture.
+        - Fisherman - Buys fish (Doy!)
     * Mixed Types. Sell and buy materials and moderate rates.
         - Mason - Buys bulk stone building materials and bricks. Sells decorative blocks.
         - Fletcher - Buys and sells arrows, guns and ammo.
         - Toolsmith - Sells all basic tools, buys bulk metals.
         - Cartographer - Buys books, ink sacs and compasses.
-        - Leatherworker - Buys Hide and Saddles.
+        - Leatherworker - Buys Hide, Leather armor and Saddles.
     * Buyer Types. Used solely for purchasing items with emeralds. Very strong trades, but bad rates.
         - Armorer - Mostly upgrades armor. Has 1 random high tier diamond equipment at max level.
         - Weaponsmith - Sells higher and higher tier weapons, up to diamond tier. Sells enchanted muskets.
@@ -56,14 +56,15 @@ MATERIAL PROGRESSION CHANGES
 * New Materials
     * Electrum -> Doesn't suffer from weight-related speed penalties and increases movement speed. Tools do higher damage at higher speeds.
     * Knight Armor -> Perfected Iron. Insane durability, and boosts the strength of nearby pets.
+    * Platinum -> Platinum is a super rare mineral found by blowing crushed gold. It shares stats with Diamond, but struggles with durability. Platinum is mainly used as a Catalyst for certain racipes rather than tools due its rarity.
         
 -----------------------------------------------------------------------------------------------------------------
 
 COMBAT
 * In vanilla, you never needed to use anything but a sword to survive, which drowns out other means of combat.
-* Spears are less powerful, craftable tridents with Loyalty I. Direct attacks are better than hands, but underwelming.
+* Spears are less powerful, craftable tridents. Direct attacks are better than hands, but underwelming. Higher tier Spears (plus the vanilla trident) all have Loyalty 1 by default.
 * Arrows have several new recipes added to incentivize bow usage.
-* Added serveral features from the mojang combat tests. Shields raise instantly, swords have longer reach, swords instantly cut grass, snowballs, eggs, and potions stack higher, crits aren't wasted on miss, and several more changes.
+* Added several features from the mojang combat tests. Shields raise instantly, swords have longer reach, swords instantly cut grass, snowballs, eggs, and potions stack higher, crits aren't wasted on miss, and several more changes.
 
 -----------------------------------------------------------------------------------------------------------------
 
@@ -75,8 +76,7 @@ SOCIETY
     * Honor: Honor is a very limited currency that circulates around the crown. When the treasury is upgraded by storing money inside it, Honor is given to the current King. Honor can be traded in the honor shop for some items or for favours (Mainly calling in troops and mercenaries to fight for you or attack other players)
 * The Law: Players have access to a strong legal framework. Players who learn and uphold the law embolden the King's power, or maybe become Judges or the Sheriff. Players who commit crimes may be imprisoned or sactioned. Depending on how the law is used, it may empower and legitimize the King or turn the people against him.
 * Consecration: Consecrated buidings are officially owned or endorsed by the King marked using a lodestone.
-* Swag: Added clothes, which provide heavy knockback resistance and minor defense. Clothes can be repaired by throwing them into the wash without cost.
-
+* Swag: Added clothes, which negate most knockback and provide minor defense. Clothes can be repaired by throwing them into the wash without cost.
 
 -----------------------------------------------------------------------------------------------------------------
 
@@ -114,20 +114,24 @@ CRAFTING
 
 
 CREATE
-* Removed Create Washing Gravel into iron. (Automation in this pack shouldn't be indefinite/infinite output from no input. Mining is a more important aspect of Minecraft than automating everything, even if thats what create aims to do. With minor tweaks create should serve to complement vanilla moreso than replace parts of it) D
+* Removed Create Washing Gravel into iron. (Automation in this pack shouldn't be indefinite/infinite output from no input. Mining is a more important aspect of Minecraft than automating everything, even if thats what create aims to do. With minor tweaks create should serve to complement vanilla moreso than replace whole parts of it) D
 * Netherite Diving gear now has slighly less protection than Iron Armor rather than sharing stats with Netherite (The immortal netherite chestplate, for starters, was always really confusing to me because there was really no reason not to have one. It costs less than making a normal netherite chestplate for a permanent upgrade to your armor. You may not have noticed this originally, but you can literally just combine the copper pieces of armor with one netherite ingot and an upgrade template. As for the diving helmet, which is also a direct upgrade due to not requiring a diamond helmet, it combined with the backtank lets you breath under lava, undermining potions in the process. All in all, the netherite diving gear in create is kind of baffling to me.)
 * Removed Netherite Diving Gear recipe that uses diamond gear as a base. Now only the  + template + copper diving gear recipes remain, which explain the lower defense as it doesn't use diamond armor as a component.
 * Tripled Backtank S.U Storage.
 * Added Milling Recipes for Raw Ores with an 80% chance of success each time. D
-* Reworked Brass. Brass is made by superheating Brass Precursor, which is made by mixing Crushed Raw Brass + Zinc. D
+* Reworked Brass. Brass is made by Heating a new item, Brass Precursor, which is made by mixing Crushed Raw Brass + Zinc. D
 * Crushing Wheels now require an additional 4 blocks of Brass. D
 * Added the ability to crush Cobbled Deepslate into 3x Gravel. D
-* Added Catalysts, which can be mixxed with some crushed ores to have a chance (Roughly 60%) of doubling them. Catalysts have a high (but not garunteed) chance of not being used each time. Catalysts can be made using a Heart of The Sea, or duplicated from a pre-exisitng Catalyst by using Hearts of Diamond (Mob Drop added by Quark). On average, a singular Catalyst can net you ~20 of each crushed raw mineral. If you're especially unlucky, Catalysts could wind up losing all of the materials put into it. (Iron, Zinc, Gold) D
-* Added Tumbling Recipes, which generate materials similarly to Catalysts, but use Amethysts. Amethysts are much more likely to be consumed than Catalysts, but are technically farmable. (Gravel -> Iron, Cobblestone -> Zinc, Red Sand -> Gold Soul Blocks -> Bones, Red Sand -> Gold, Cobbled Deepslate -> Diamond). D
+* Added Tumbling Recipes, which are this modpacks way of farming certain minerals. They're similar to base Create's blowing recipes, but use Amethysts. Amethysts have a chance of not being consumed each craft. (Gravel -> Iron, Cobblestone -> Zinc, Red Sand -> Gold, Soul Blocks -> Bones, Red Sand -> Gold, Cobbled Deepslate -> Diamond). D
 * Removed an Oreganized recipe that allowed you to infinitely duplicate lead. D
 
+CHEMISTRY
+* Added Chemicals: Hydrogen, Nitrogen, Oxygen, Ammonia, Nitric Acid, Bleach, Propylene Glycol
+* Added Minerals: Moissanite (Scientific Diamond, but has less recipes and is pretty expensive), Graphite (Used for Inkless book and quills and Moissanite), Platinum (Used as a Catalyst. Becomes tarnished between uses and needs to be washed.)
+* Added Items: Pure Sulfur (Component of Gunpowder), Ammonium Nitrate (Key Component of Gunpowder, alongside Pure Sulfur and Coal), Garbage (Obtained many ways! Useless...)
+
 WORLD
-* Added tectonic (may switch out) pd
+* Added Tectonic w/ Hearts + Geophilic. Tectonic overhauls world generation to be more grand/realistic, which Hearths + Geophilic overhaul most biomes to look more interesting. D
 * Added EnhancedCelestials, which causes the moon to randomly cause buffs or full scale invasions some nights. Cannot sleep through bad Celestial events. ONHOLD
 * Days last 20 minutes and nights last 15. PD
 * Significantly lowered chance of exposed diamonds being removed during worldgen. D
