@@ -23,6 +23,7 @@
       "id": "utopia:neon_block"
     },
     "title": [
+      {"text": "", "color": "#55FF00"},
       {"text": "L", "color": "#FF0000"},
       {"text": "E", "color": "#FF5500"},
       {"text": "N", "color": "#FFAA00"},

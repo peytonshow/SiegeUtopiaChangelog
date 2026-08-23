@@ -73,15 +73,13 @@ ServerEvents.tags('item', event => {
     addCoin('utopia:coin_netherite')
     addCoin('utopia:coin_netherite_fractional')
 
+    makeKindaNotSword('utopia:pencil')
+
     event.add('utopia:diamonds', 'minecraft:diamond')
     event.add('utopia:diamonds', 'utopia:moissanite')
-    makeKindaNotSword('utopia:pencil')
 
     event.add('create:pulpifiable', 'farmersdelight:tree_bark')
     event.add('create:upright_on_belt', '#utopia:beakers')
-
-    event.add('utopia:platinum', 'utopia:platinum_ingot')
-    event.add('utopia:platinum', 'utopia:tarnished_platinum_ingot')
 
     event.add('utopia:electricity', 'create:experience_nugget')
     //event.add('create:upright_on_belt', '#c:dusts')

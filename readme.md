@@ -15,8 +15,8 @@ KEYS
 - PD     - Partly Done
 - TD     - Test first, otherwise done
 - F      - Final
-- CON      - Conceptual, still being built upon
-- ONHOLD - May not make it to being tested, potentially unnecessary.
+- CON    - Conceptual, a piece of other incomplete changes
+- ONHOLD - Potentially unnecessary.
 
 ----------------------------------------------------------------------------------------------------------------
 
@@ -207,6 +207,7 @@ TOOLS
 * Upgrade Tokens can be crafted with 6 Gold Ingots, 2 Emeralds and 1 Ender Eye. (May add more uses to tokens) D
 * Added Gliders and simplified recipes for them. (The original had some crazy recipes for something that never even got close to overtaking elytas. Like, I need 6 ingots of netherite for a netherite glider?!) D
 * Added Cuffs and Leg Restraints, which can be used to imprison people for trial.
+* Oreganized Scribe durability changed to 650. D
 
 MONSTERS
 * Skeletons and Pillagers have increased range, but much worse accuracy. Zombies and other melee units tend to give time for ranged unit # to grow quickly, and may create a need for a player owned backline of ranged troops D

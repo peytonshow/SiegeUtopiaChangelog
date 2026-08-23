@@ -199,22 +199,22 @@ ItemEvents.modification(event => {
             canAlwaysEat: false
         })
     })
-    event.modify('naturalist:cooked_bushmeat', item => {
-        item.setFood({
-            eatSeconds: 1.6,
-            nutrition: 8,
-            saturation: 3,
-            canAlwaysEat: false
-        })
-    })
-    event.modify('utopia:seasoned_cooked_bushmeat', item => {
-        item.setFood({
-            eatSeconds: 1.6,
-            nutrition: 8,
-            saturation: 8,
-            canAlwaysEat: false
-        })
-    })
+    // event.modify('naturalist:cooked_bushmeat', item => {
+    //     item.setFood({
+    //         eatSeconds: 1.6,
+    //         nutrition: 8,
+    //         saturation: 3,
+    // //         canAlwaysEat: false
+    // //     })
+    // // })
+    // event.modify('utopia:seasoned_cooked_bushmeat', item => {
+    //     item.setFood({
+    //         eatSeconds: 1.6,
+    //         nutrition: 8,
+    //         saturation: 8,
+    //         canAlwaysEat: false
+    //     })
+    // })
 
 
 

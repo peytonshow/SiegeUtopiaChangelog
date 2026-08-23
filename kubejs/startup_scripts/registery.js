@@ -5,11 +5,11 @@ ItemEvents.toolTierRegistry(event => {
   });
 
   event.add('pencil', tier => {
-    tier.uses = 12                 // Durability
+    tier.uses = 96             // Durability
     tier.speed = 2.0                 // Mining speed (matters if they clear cobwebs/leaves)
     tier.attackDamageBonus = 3.0     // Base damage bonus added to weapons
     tier.enchantmentValue = 0       // Enchantability level
-    tier.repairIngredient = 'minecraft:stick' // Item used to fix it in an anvil (or '#c:gems/ruby')
+    tier.repairIngredient = '#minecraft:coals' // Item used to fix it in an anvil (or '#c:gems/ruby')
   })
   event.add('utopia:hammer', tier => {
     tier.uses = 128
@@ -29,7 +29,9 @@ StartupEvents.registry('item', event => {
     event.create('utopia:incomplete_netherite_leggings', 'create:sequenced_assembly').texture('utopia:item/incomplete_netherite_leggings').displayName('Patchwork Netherite Leggings')
     event.create('utopia:incomplete_netherite_boots', 'create:sequenced_assembly').texture('utopia:item/incomplete_netherite_boots').displayName('Patchwork Netherite Boots')
     event.create('utopia:overworld_upgrade_template').displayName('Manufactured Template').texture('utopia:item/overworld_upgrade_template')
-    event.create('utopia:catalyst').displayName('Catalyst').texture('utopia:item/catalyst').rarity('uncommon')
+
+    //event.create('utopia:catalyst').displayName('Catalyst').texture('utopia:item/catalyst').rarity('uncommon') USELESS! 
+
     event.create('utopia:uneven_raw_brass_precursor').displayName('Brass Precursor').texture('utopia:item/uneven_raw_brass_precursor')
 
     // Sciantest
@@ -43,18 +45,17 @@ StartupEvents.registry('item', event => {
     event.create('utopia:beaker_nitric_acid').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/beaker_nitric_acid').displayName('Beaker of Nitric Acid').useAnimation('drink')
     event.create('utopia:beaker_bleach').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/bleach').displayName('Bleach').useAnimation('drink')
     event.create('utopia:beaker_propylene_glycol').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/propylene_glycol').displayName('Propylene Glycol').useAnimation('drink')
-    event.create('utopia:ammonium_nitrate').tag('utopia:chemistry').texture('utopia:item/ammonium_nitrate').displayName('Ammonium Nitrate').useAnimation('drink')
+    event.create('utopia:ammonium_nitrate').tag('utopia:chemistry').texture('utopia:item/ammonium_nitrate').displayName('Ammonium Nitrate')
     event.create('utopia:pure_sulfur').tag('utopia:chemistry').texture('utopia:item/sulphur').displayName('Pure Sulfur')
 
     // Electricity
     //event.create('utopia:battery_charged').displayName('Graphite').texture('utopia:item/graphite_ingot')
 
     // Ingots
-    event.create('utopia:graphite_ingot').displayName('Graphite').texture('utopia:item/graphite_ingot')
-    event.create('utopia:graphite_nugget').displayName('Graphite Rod').texture('utopia:item/graphite_nugget')
-    event.create('utopia:platinum_ingot').displayName('Platinum Ingot').texture('utopia:item/platinum_ingot')
+    event.create('utopia:graphite_ingot').displayName('Graphite').texture('utopia:item/graphite_ingot').tag('c:ingots').tag('c:ingots/graphite')
+    event.create('utopia:platinum_ingot').displayName('Platinum Ingot').texture('utopia:item/platinum_ingot').tag('c:ingots').tag('c:ingots/platinum')
     event.create('utopia:platinum_nugget').displayName('Platinum Nugget').texture('utopia:item/platinum_nugget')
-    event.create('utopia:tarnished_platinum_ingot').displayName('Tarnished Platinum Ingot').texture('utopia:item/tarnished_platinum_ingot')
+    event.create('utopia:tarnished_platinum_ingot').displayName('Tarnished Platinum Ingot').texture('utopia:item/tarnished_platinum_ingot').tag('c:ingots').tag('c:ingots/platinum')
 
     // Copper tools.
     event.create('minecraft:copper_sword', 'sword').tier('stone').maxDamage(100)
@@ -109,13 +110,13 @@ StartupEvents.registry('item', event => {
     event.create('utopia:seasoned_cooked_chicken').maxStackSize(global.MAXFOODSIZE).displayName('Seasoned Chicken')
     event.create('utopia:seasoned_cooked_mutton').maxStackSize(global.MAXFOODSIZE).displayName('Seasoned Mutton')
     event.create('utopia:seasoned_cooked_rabbit').maxStackSize(global.MAXFOODSIZE).displayName('Seasoned Rabbit')
-    event.create('utopia:seasoned_cooked_bushmeat').maxStackSize(global.MAXFOODSIZE).displayName('Seasoned Bushmeat')
+    // event.create('utopia:seasoned_cooked_bushmeat').maxStackSize(global.MAXFOODSIZE).displayName('Seasoned Bushmeat')
 
 })
 
 StartupEvents.registry('block', event => {
   event.create('utopia:pink_salt_lamp') 
-    .displayName('Pink Salt Rock Lamp')
+    .displayName('Pink Salt Lamp')
     .soundType('glass') 
     .hardness(3) 
     .resistance(4)
@@ -124,7 +125,7 @@ StartupEvents.registry('block', event => {
     .notSolid()
     .fullBlock(false)
   event.create('utopia:lava_salt_lamp') 
-    .displayName('Sulphuric Salt Rock Lamp')
+    .displayName('Sulphuric Salt Lamp')
     .soundType('glass') 
     .hardness(3) 
     .resistance(4)
@@ -133,7 +134,7 @@ StartupEvents.registry('block', event => {
     .notSolid()
     .fullBlock(false)
   event.create('utopia:iodide_salt_lamp') 
-    .displayName('Iodide Salt Rock Lamp')
+    .displayName('White Salt Lamp')
     .soundType('glass') 
     .hardness(3) 
     .resistance(4)

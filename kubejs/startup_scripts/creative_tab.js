@@ -1,12 +1,16 @@
-// This MUST go in kubejs/startup_scripts/
-// To see changes, you must close and restart the Minecraft client entirely!
-
 StartupEvents.modifyCreativeTab('minecraft:tools_and_utilities', event => {
     event.addAfter('minecraft:stone_hoe', [
         'minecraft:copper_hoe',
         'minecraft:copper_axe',
         'minecraft:copper_pickaxe',
         'minecraft:copper_shovel'
+
+    ])
+    event.addAfter('minecraft:diamond_hoe', [
+        'utopia:platinum_hoe',
+        'utopia:platinum_axe',
+        'utopia:platinum_pickaxe',
+        'utopia:platinum_shovel'
 
     ])
 })
@@ -18,10 +22,18 @@ StartupEvents.modifyCreativeTab('minecraft:combat', event => {
     event.addAfter('minecraft:stone_axe',[
         'minecraft:copper_axe'
     ])
+    event.addAfter('minecraft:diamond_sword', [
+        'utopia:platinum_sword'
+    ])
+    event.addAfter('minecraft:diamond_axe',[
+        'utopia:platinum_axe'
+    ])
 })
 
 StartupEvents.modifyCreativeTab('kubejs:kubejs', event => {
 	event.remove('utopia:incomplete_netherite_boots','utopia:incomplete_netherite_leggings', 'utopia:incomplete_netherite_chestplate', 'utopia:incomplete_netherite_helmet')
+	event.remove('utopia:tarnished_platinum_ingot')
+
 })
 
 StartupEvents.modifyCreativeTab('minecraft:food_and_drinks', event => {
@@ -32,7 +44,11 @@ StartupEvents.modifyCreativeTab('minecraft:food_and_drinks', event => {
     event.addAfter('minecraft:cooked_rabbit',['utopia:seasoned_cooked_rabbit'])
 
     event.addAfter('utopia:seasoned_cooked_rabbit',['naturalist:bushmeat'])
-    event.addAfter('naturalist:bushmeat',['naturalist:cooked_bushmeat'])
-    event.addAfter('naturalist:cooked_bushmeat',['utopia:seasoned_cooked_bushmeat'])
 })
 
+StartupEvents.modifyCreativeTab('minecraft:ingrediants', event => {
+    event.addAfter('minecraft:lapis_lazuli',['utopia:graphite_ingot'])
+    event.addAfter('minecraft:lapis_lazuli',['utopia:moissanite'])
+    event.addAfter('oreganized:silver_ingot',['utopia:platinum_ingot'])
+    event.addAfter('minecraft:clay_ball',['utopia:silica_dust'])
+})

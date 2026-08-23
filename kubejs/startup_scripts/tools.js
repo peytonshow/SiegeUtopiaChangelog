@@ -2,7 +2,7 @@ ItemEvents.modification(event => {
 
     // Scribe
     event.modify('oreganized:scribe', item => {
-        item.maxDamage = 750
+        item.maxDamage = 650
     })
 
     // Hoez
@@ -26,7 +26,7 @@ ItemEvents.modification(event => {
 
     // Gold Durability Buffs
 
-    event.modify('spearsmod:golden_spear', item => {
+    event.modify('minecraft:golden_spear', item => {
         item.maxDamage = 45
     })
 
@@ -57,7 +57,7 @@ ItemEvents.modification(event => {
 
 
     // Early tools
-    event.modify('spearsmod:wooden_spear', item => {
+    event.modify('minecraft:wooden_spear', item => {
         item.maxDamage = 5
     })
     event.modify('minecraft:wooden_sword', item => {
@@ -75,7 +75,7 @@ ItemEvents.modification(event => {
     event.modify('minecraft:flint_and_steel', item => {
         item.maxDamage = 12
     })
-    event.modify('spearsmod:stone_spear', item => {
+    event.modify('minecraft:stone_spear', item => {
         item.maxDamage = 5
     })
     event.modify('minecraft:stone_sword', item => {

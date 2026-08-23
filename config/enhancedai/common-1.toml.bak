@@ -444,7 +444,7 @@
 	"Enable Open doors" = true
 	#Makes mobs pick up targets to drown them. Only entity types in the enhancedai:mobs/drowning_targets tag are affected by this feature.
 	"Enable Drowning targets" = true
-	#Make mobs angry when a block is broken. Check the mod's config folder Mobs/Break Anger/break_anger_config.json to change blocks and entities triggered.
+	#Make mobs angry when a block is broken. Check the mod's config folder Mobs/Break anger/break_anger_config.json to change blocks and entities triggered.
 	"Enable Break anger" = false
 	#Makes drowned swim speed based off swim speed attribute instead of movement speed.
 	"Enable Swimmers" = false
@@ -501,6 +501,10 @@
 	"Enable Leaders" = true
 	#Enables a Mobs Properties Randomness data pack that adds even more buffs to mobs. Only gets enabled if MPR is installed
 	"Enable MPR data pack" = true
+	#Mobs can bite if are attacked with non-weapons. Only mobs in the enhancedai:mobs/biting_mobs/can_bite entity type tag can bite. Entity types in `mobs/biting_mobs/unaffected_by_bite` tag are unaffected by bites. Damage types in `biting_mobs/doesnt_trigger_bite` tag don't trigger biting mobs.
+	"Enable Biting mobs" = true
+	#Mobs will jump off the ground to emit a shockwave when falling damaging nearby entities. Only entity types in enhancedai:mobs/shockwave/can_use tag are affected by this feature and entity types in the enhancedai:mobs/shockwave/damage_invulnerable tag will not be damaged by the shockwave.
+	"Enable Falling shockwave" = false
 
 	#Mobs can mine blocks to reach the target. Uses offhand item to mine. Only mobs in the entity type tag enhancedai:mobs/can_mine can spawn with the ability to mine and blocks in the tag enhancedai:miner_blacklist cannot be mined. This feature also adds the block reach attribute to all entities.
 	[Mobs."Miner mobs"]
@@ -705,6 +709,14 @@
 		# Default: 4.0
 		# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
 		"Max visited nodes multiplier" = 1.0
+		#Chance for a mob to have to sense the target to keep targeting it. If the mob must sense the target might stop following it if can't sense it (through seeing, xray or glowing)
+		# Default: 0.5
+		# Range: 0.0 ~ 1.0
+		"Must sense target" = 0.5
+		#After how many ticks a mob will forget about the target if can't sense it anymore
+		# Default: 300
+		# Range: > -2147483648
+		"Unsensed forget tick" = 300
 
 		#How far away can the mobs see targets. This overrides the vanilla value (16 for most mobs). Setting 'Max' to 0 will leave the follow range as vanilla. Use mods like Mobs Properties Randomness to have more control over the attribute. Only mobs in the entity type tag `enhancedai:mobs/targeting/follow_range_override` will be affected by this override
 		[Mobs.Targeting."Follow range override"]
@@ -717,10 +729,10 @@
 
 		#How far away can the mobs see targets even through walls. This only works with 'Better Nearby Targeting' enabled. Setting 'Max' to 0 will make mobs not able to see through walls. Use mods like Mobs Properties Randomness to have more control over the attribute; the attribute name is 'enhancedai:xray_follow_range'. Only mobs in the entity type tag `enhancedai:mobs/targeting/apply_xray` will be affected by this override.
 		[Mobs.Targeting."Xray range override"]
-			# Default: 8.0
+			# Default: 4.0
 			# Range: 0.0 ~ 128.0
 			Minimum = 12.0
-			# Default: 16.0
+			# Default: 12.0
 			# Range: 0.0 ~ 128.0
 			Maximum = 24.0
 
@@ -997,9 +1009,64 @@
 		# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
 		"Leader spawn reinforcements chance" = 1.0
 		"Reinforces can spawn as leader" = false
-		#If true, leader mobs will have 4x health and +15 armor.
+		#If true, leader mobs will have 4x health and +10 armor.
 		"Bonus stats" = true
 		"Remove vanilla spawn reinforcements chance" = true
+		#If true, reinforcements will spawn only if the damage comes from an entity
+		"Entity damage only" = false
+
+	#Mobs can bite if are attacked with non-weapons. Only mobs in the enhancedai:mobs/biting_mobs/can_bite entity type tag can bite. Entity types in `mobs/biting_mobs/unaffected_by_bite` tag are unaffected by bites. Damage types in `biting_mobs/doesnt_trigger_bite` tag don't trigger biting mobs.
+	[Mobs."Biting mobs"]
+		#The damage dealt to the attacker when bit
+		# Default: 3.0
+		# Range: 0.0 ~ 1.7976931348623157E308
+		Damage = 3.0
+
+		#Chance for a Mob to bite the attacker
+		[Mobs."Biting mobs".Chance]
+			# Default: 0.2
+			# Range: 0.0 ~ 1.0
+			"Easy/Peaceful" = 0.2
+			# Default: 0.2
+			# Range: 0.0 ~ 1.0
+			Normal = 0.2
+			# Default: 0.3
+			# Range: 0.0 ~ 1.0
+			Hard = 0.3
+
+	#Mobs will jump off the ground to emit a shockwave when falling damaging nearby entities. Only entity types in enhancedai:mobs/shockwave/can_use tag are affected by this feature and entity types in the enhancedai:mobs/shockwave/damage_invulnerable tag will not be damaged by the shockwave.
+	[Mobs."Falling shockwave"]
+		# Default: 1.5
+		# Range: 0.0 ~ 1.7976931348623157E308
+		"Jump strength" = 1.5
+		#In ticks
+		# Default: 300
+		# Range: > 0
+		"Jump cooldown" = 300
+		#If the mob falls for less than these blocks, the shockwave will not happen
+		# Default: 3
+		# Range: > 0
+		"Min fall distance" = 3
+		#Damage per block of fall distance.
+		# Default: 1.0
+		# Range: 0.0 ~ 1.7976931348623157E308
+		"Damage per block" = 1.0
+		#Fall distance multiplied by this
+		# Default: 0.08
+		# Range: 0.0 ~ 1.7976931348623157E308
+		"Knock up strength ratio" = 0.08
+		# Default: 2.0
+		# Range: 0.0 ~ 1.7976931348623157E308
+		"Horizontal base range" = 2.0
+		# Default: 1.0
+		# Range: 0.0 ~ 1.7976931348623157E308
+		"Vertical base range" = 1.0
+		# Default: 0.2
+		# Range: 0.0 ~ 1.7976931348623157E308
+		"Horizontal range per block" = 0.2
+		# Default: 0.1
+		# Range: 0.0 ~ 1.7976931348623157E308
+		"Vertical range per block" = 0.1
 
 [Warden]
 	#Change the distance at which vibrations reach wardens.
@@ -1103,7 +1170,7 @@
 [Animals]
 	#Make animals panic when one is attacked. Only entity types in `enhancedai:animal/can_panic` tag will be affected by this feature.
 	"Enable Animals panic" = false
-	#Makes animals not tempted by food. Use the entity type tag enhancedai:animal/can_ignore_food_temptation to change animals.
+	#Makes animals not tempted by food. Use the entity type tag enhancedai:animal/can_ignore_food_temptation to change animals. Please note that re-adding the tempt goal to the mob can't be done at runtime by updating the data with the /enhancedai command.
 	"Enable Not tempted animals" = false
 	#Make animals fight back or be scared by players. Use the entity type tag enhancedai:animal/scared_attack/can_be_neutral, enhancedai:animal/scared_attack/can_be_hostile, and enhancedai:animal/scared_attack/can_be_scared_by_players to add/remove animals.
 	"Enable Animal scared attack" = false
@@ -1149,7 +1216,7 @@
 		#Animals' knockback attribute will be increased/decreased based on the size of the mob.
 		"Knockback size based" = true
 
-	#Makes animals not tempted by food. Use the entity type tag enhancedai:animal/can_ignore_food_temptation to change animals.
+	#Makes animals not tempted by food. Use the entity type tag enhancedai:animal/can_ignore_food_temptation to change animals. Please note that re-adding the tempt goal to the mob can't be done at runtime by updating the data with the /enhancedai command.
 	[Animals."Not tempted animals"]
 		#Animals have this percentage chance to not be temped by food.
 		# Default: 0.5
@@ -1298,3 +1365,14 @@
 			# Default: 3.0
 			# Range: 0.0 ~ 30.0
 			Normal = 7.0
+
+[Endermen]
+	#Changes the angular size of the enderman's 'face' that angers them when looked at. Higher values make endermen anger from a wider viewing angle.
+	"Enable Look anger cone" = true
+
+	#Changes the angular size of the enderman's 'face' that angers them when looked at. Higher values make endermen anger from a wider viewing angle.
+	[Endermen."Look anger cone"]
+		#Controls how directly a player must look at an enderman to anger it. Vanilla is 0.025. Higher values make endermen easier to anger (wider cone).
+		# Default: 0.07
+		# Range: 0.0 ~ 1.0
+		"Look anger cone" = 0.07

@@ -13,6 +13,7 @@ StartupEvents.registry('fluid', event => {
       //.addDripstoneDripping(1, $ParticleTypes.DRIPPING_DRIPSTONE_WATER, 'minecraft:water_cauldron', $SoundEvents.POINTED_DRIPSTONE_DRIP_WATER)
     )
     .noBlock()
+    .noBucket()
 
   event.create('utopia:liquid_hydrogen')
     .displayName('Liquid Hydrogen')
@@ -25,6 +26,7 @@ StartupEvents.registry('fluid', event => {
       //.addDripstoneDripping(1, $ParticleTypes.DRIPPING_DRIPSTONE_WATER, 'minecraft:water_cauldron', $SoundEvents.POINTED_DRIPSTONE_DRIP_WATER)
     )
     .noBlock()
+    .noBucket()
 
   event.create('utopia:liquid_nitrogen')
     .displayName('Liquid Nitrogen')
@@ -36,6 +38,7 @@ StartupEvents.registry('fluid', event => {
       .fallDistanceModifier(0)
     )
     .noBlock()
+    .noBucket()
 
   event.create('utopia:ammonia')
     .displayName('Ammonia')
@@ -47,6 +50,7 @@ StartupEvents.registry('fluid', event => {
       .fallDistanceModifier(0)
     )
     .noBlock()
+    .noBucket()
 
   event.create('utopia:nitric_acid')
     .displayName('Nitric Acid')
@@ -58,6 +62,7 @@ StartupEvents.registry('fluid', event => {
       .fallDistanceModifier(0)
     )
     .noBlock()
+    .noBucket()
 
   event.create('utopia:bleach')
     .displayName('Bleach')
@@ -68,7 +73,6 @@ StartupEvents.registry('fluid', event => {
       .flowingTexture('kubejs:block/gas_flow')
       .fallDistanceModifier(0)
     )
-    .bucketItem.texture('utopia:item/bleach')
 
   event.create('utopia:propylene_glycol')
     .displayName('Propylene Glycol')
@@ -80,5 +84,5 @@ StartupEvents.registry('fluid', event => {
       .fallDistanceModifier(0)
     )
     .noBlock()
-    .bucketItem.texture('utopia:item/propylene_glycol')
+    .noBucket()
 })

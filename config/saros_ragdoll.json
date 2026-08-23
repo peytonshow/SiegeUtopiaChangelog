@@ -1,0 +1,14 @@
+{
+  "ReviveItem": "saros_ragdoll:firstaidkit",
+  "ReviveItemDescription": "You need a first aid kit to revive the player",
+  "RequireReviveItem": true,
+  "ToggleRagdollGUI": true,
+  "RequireOPForRevive": true,
+  "DropItems": "DropWhenRespawn",
+  "RespawnTimer": 62,
+  "ShowExitButton": true,
+  "ShowReviveButton": true,
+  "ShowRespawnButton": true,
+  "debug": false,
+  "PhysicsMode": "smooth"
+}

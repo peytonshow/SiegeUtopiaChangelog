@@ -38,8 +38,8 @@
     }
   },
   "textures": {
-    "particle": "block/spruce_planks",
-    "frame": "block/spruce_planks",
+    "particle": "utopia:block/degree/frame",
+    "frame": "utopia:block/degree/frame",
     "canvas": "utopia:block/degree/anthropology_paper",
     "ribbon": "utopia:block/degree/ribbon"
   },

@@ -141,21 +141,21 @@ ItemEvents.modification(event => {
         "farmersdelight:gleaming_salad",
         "farmersdelight:rice_roll_medley_block",
         "farmersdelight:dog_food",
+        // "naturalist:cooked_bushmeat",
+        // "naturalist:bushmeat",
+        // "naturalist:cooked_duck",
+        // "naturalist:duck",
+        // "naturalist:cooked_venison",
+        // "naturalist:venison",
+        // "naturalist:cooked_lizard_tail",
+        // "naturalist:lizard_tail",
+        // "naturalist:bass",
+        // "naturalist:cooked_bass",
         "create:bar_of_chocolate",
         "create:sweet_roll",
         "create:chocolate_glazed_berries",
         "create:honeyed_apple",
-        "create:builders_tea",
-        "naturalist:cooked_bushmeat",
-        "naturalist:bushmeat",
-        "naturalist:cooked_duck",
-        "naturalist:duck",
-        "naturalist:cooked_venison",
-        "naturalist:venison",
-        "naturalist:cooked_lizard_tail",
-        "naturalist:lizard_tail",
-        "naturalist:bass",
-        "naturalist:cooked_bass"
+        "create:builders_tea"
     ]
 
     let procStarting = 0

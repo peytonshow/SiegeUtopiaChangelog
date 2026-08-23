@@ -7,7 +7,7 @@ ItemEvents.modifyTooltips(event => {
     ]);
     const  heldShiftMessage = Text.join([
         Text.of('Hold [').darkGray(),
-        Text.of('Shift').gray(),
+        Text.of('Shift').white(),
         Text.of('] for Summary').darkGray()
     ]);
 

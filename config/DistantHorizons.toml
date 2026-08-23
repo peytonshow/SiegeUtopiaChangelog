@@ -24,7 +24,7 @@ _version = 4
 	serverKey = ""
 	#
 	# Defines the distance allowed to generate around the player.
-	maxGenerationRequestDistance = 4096
+	maxGenerationRequestDistance = 512
 	#
 	# When enabled, Distant Horizons will attempt to download missing LODs from the server.
 	# 
@@ -69,7 +69,7 @@ _version = 4
 		# When enabled on the client, this allows loading lower detail levels as needed to speed up terrain generation.
 		# This must also be enabled on the server; otherwise, it will have no effect.
 		# For better performance when switching LOD detail levels, enabling [upsampleLowerDetailLodsToFillHoles] is recommended.
-		enableNSizedGeneration = false
+		enableNSizedGeneration = true
 
 	[common.lodBuilding]
 		#
@@ -171,6 +171,12 @@ _version = 4
 
 		[common.logging.warning]
 			#
+			# If enabled, a message will be displayed in chat if explicit garbage collection 
+			# is disabled. 
+			# This is known to cause out-of-memory issues 
+			# and is better solved with a concurrent garbage collector.
+			showExplicitGcDisabledWarning = true
+			#
 			# If enabled, a chat message will be displayed when DH has too many chunks 
 			# queued for updating.
 			showSlowWorldGenSettingWarnings = true
@@ -178,6 +184,12 @@ _version = 4
 			# If enabled, a chat message will be displayed when DH has too many chunks 
 			# queued for updating.
 			showUpdateQueueOverloadedChatWarning = false
+			#
+			# If enabled, a message will be logged if explicit garbage collection 
+			# is disabled. 
+			# This is known to cause out-of-memory issues 
+			# and is better solved with a concurrent garbage collector.
+			logExplicitGcDisabledWarning = true
 			#
 			# If enabled, a chat message will be displayed if Java doesn't have enough 
 			# memory allocated to run DH well.
@@ -190,6 +202,10 @@ _version = 4
 			# If enabled, a chat message will be displayed when a potentially problematic 
 			# mod is installed alongside DH.
 			showModCompatibilityWarningsOnStartup = true
+			#
+			# If enabled, a chat message will be displayed when DH is using 
+			# a deprecated renderer.
+			showDeprecatedRendererWarningOnStartup = true
 			#
 			# If enabled, a chat message will be displayed if vanilla MC's 
 			# render distance is higher than the recommended amount.
@@ -204,7 +220,7 @@ _version = 4
 			# to cause frame stuttering and/or other issues.
 			logGarbageCollectorWarning = true
 			#
-			# If enabled, a chat message will be displayed if the garbage 
+			# If enabled, a chat message will be displayed in chat if the garbage 
 			# collector Java is currently using is known 
 			# to cause frame stuttering and/or other issues.
 			showGarbageCollectorWarning = true
@@ -543,6 +559,62 @@ _version = 4
 				# generate chunks fast enough to keep up with DH.
 				reduceOverdrawWithFastMovement = true
 
+			[client.advanced.graphics.texture]
+				#
+				# A comma separated list of block resource locations 
+				# that DH will render their sides using the bottom texture. 
+				# Partial matches/incomplete resource locations will also match. 
+				# 
+				# Example: "minecraft:grass_block,nylium" 
+				# 
+				# Changes require a restart.
+				blocksDontUseSideTextureCsv = "grass_block,mycelium,nylium,dirt_path"
+				#
+				# The highest detail level number that can render with block textures. 
+				# At higher detail levels each LOD covers multiple blocks, 
+				# which can essentially make textures smaller than a pixel and therefore invisible. 
+				#  
+				# Larger numbers texture more distant LODs 
+				# but increase memory usage.
+				maxTexturedLodDetailLevel = 2
+				#
+				# If true nearby and zoomed-in LODs will render with their block's 
+				# actual texture instead of a single flat color. 
+				#  
+				# Only applies to high detail LODs where the texture is actually visible, 
+				# distant LODs always use flat colors. 
+				# Some shader packs nay not have an affect.
+				enableTexturedLods = true
+				#
+				# A comma separated list of block resource locations 
+				# that DH won't render textures on. 
+				# Partial matches/incomplete resource locations will also match. 
+				# 
+				# Example: "minecraft:grass_block,nylium" 
+				# 
+				# Changes require a restart.
+				blocksDontRenderTextureCsv = "minecraft:bamboo"
+				#
+				# A comma separated list of tag names 
+				# that DH will render their sides using the bottom texture. 
+				# 
+				# Example: "grass_blocks,nylium" 
+				# 
+				# Changes require a restart.
+				blockTagsDontUseSideTextureCsv = "grass_blocks,nylium"
+				#
+				# A comma separated list of block resource locations 
+				# that DH will use rasterization to determine 
+				# the face textures.
+				# 
+				# Can be used to fix issues with mods/blocks where
+				# a side uses just part of a modeled block's texture. 
+				# 
+				# Example: "minecraft:beacon" 
+				# 
+				# Changes require a restart.
+				blocksAlwaysRasterizeTextureCsv = "minecraft:beacon"
+
 			[client.advanced.graphics.noiseTexture]
 				#
 				# Should a noise texture be applied to LODs? 
@@ -672,6 +744,13 @@ _version = 4
 				# DISABLED: All LOD sides will be rendered with the same brightness.
 				lodShading = "AUTO"
 				#
+				# How many detail levels zooming in can increase LOD quality by. 
+				# Higher numbers allow stronger zooms to render crisper terrain, 
+				# but will increase memory and GPU usage while zoomed in. 
+				#  
+				# A vanilla spyglass needs 4 detail levels to reach its full quality.
+				maxZoomQualityIncrease = 4
+				#
 				# How saturated LOD colors are. 
 				# 
 				# 0 = black and white 
@@ -727,6 +806,15 @@ _version = 4
 				# SINGLE_PASS: Fades after MC's transparent pass, opaque blocks underwater won't be faded. 
 				# DOUBLE_PASS: Slowest, fades after both MC's opaque and transparent passes, provides the smoothest transition.
 				vanillaFadeMode = "DOUBLE_PASS"
+				#
+				# If true LOD quality will increase when the camera is zoomed in, 
+				# IE when using a spyglass or zoom mod. 
+				# 
+				# Only LODs visible through the camera view are affected. 
+				# 
+				# When zoomed in LODs will load to the same detail level 
+				# they would have if you were close to them.
+				increaseQualityWhenZoomedIn = true
 
 			[client.advanced.graphics.fog]
 				#

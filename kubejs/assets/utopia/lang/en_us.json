@@ -40,5 +40,7 @@
   "advancements.utop.obviously_harmful_chemical.title": "Chug Drug",
   "advancements.utop.obviously_harmful_chemical.description": "Drink chemicals",
   "advancements.utop.rapid_cell_decay.title": "Rapid Cell Decay",
-  "advancements.utop.rapid_cell_decay.description": "Drink an extremely dangerous chemical"
+  "advancements.utop.rapid_cell_decay.description": "Drink an extremely dangerous chemical",
+  "advancements.utop.with_this_treasure.title": "With this Treasure, I Summon...",
+  "advancements.utop.with_this_treasure.description": "Create a weapon of Mass-Destruction."
 }
