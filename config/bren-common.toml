@@ -1,0 +1,86 @@
+#Overall recoil multiplier. 1.0 is the default recoil.
+# Default: 1.0
+# Range: 0.0 ~ 10.0
+recoil_multiplier = 1.0
+#§cEXPERIMENTAL: Bullet speed multiplier. 0 = default weapon speed; 1-10 = exact multiplier. This may cause bugs.
+# Default: 0.0
+# Range: 0.0 ~ 10.0
+bullet_speed_multiplier = 0.0
+#Default damage of the regular Machine Gun.
+# Default: 4.5
+# Range: 0.0 ~ 100.0
+machine_gun_damage = 4.5
+#Default damage of the regular Auto-Gun.
+# Default: 5.5
+# Range: 0.0 ~ 100.0
+auto_gun_damage = 5.5
+#Default damage of the FAMAS Assault Rifle.
+# Default: 4.5
+# Range: 0.0 ~ 100.0
+famas_damage = 4.5
+#Default damage of the Netherite FAMAS Assault Rifle.
+# Default: 5.0
+# Range: 0.0 ~ 100.0
+netherite_famas_damage = 5.0
+#Default damage of the regular Rifle.
+# Default: 12.0
+# Range: 0.0 ~ 100.0
+rifle_damage = 12.0
+#Default damage per pellet of the regular Shotgun.
+# Default: 4.0
+# Range: 0.0 ~ 100.0
+shotgun_damage = 4.0
+#Default damage of the regular Revolver.
+# Default: 8.0
+# Range: 0.0 ~ 100.0
+revolver_damage = 8.0
+#Default damage of the regular SMG.
+# Default: 2.5
+# Range: 0.0 ~ 100.0
+smg_damage = 2.5
+#Default damage of the regular Lever-Action Rifle.
+# Default: 10.0
+# Range: 0.0 ~ 100.0
+winchester_damage = 10.0
+#Default damage of the Netherite Machine Gun.
+# Default: 5.0
+# Range: 0.0 ~ 100.0
+netherite_machine_gun_damage = 5.0
+#Default damage of the Netherite Auto-Gun.
+# Default: 6.0
+# Range: 0.0 ~ 100.0
+netherite_auto_gun_damage = 6.0
+#Default damage of the Netherite Rifle.
+# Default: 13.0
+# Range: 0.0 ~ 100.0
+netherite_rifle_damage = 13.0
+#Default damage per pellet of the Netherite Shotgun.
+# Default: 4.5
+# Range: 0.0 ~ 100.0
+netherite_shotgun_damage = 4.5
+#Default damage of the Netherite Revolver.
+# Default: 9.0
+# Range: 0.0 ~ 100.0
+netherite_revolver_damage = 9.0
+#Default damage of the Netherite SMG.
+# Default: 3.0
+# Range: 0.0 ~ 100.0
+netherite_smg_damage = 3.0
+#Default damage of the Netherite Lever-Action Rifle.
+# Default: 11.0
+# Range: 0.0 ~ 100.0
+netherite_winchester_damage = 11.0
+#Allow bullets to break bamboo, all glass/glass panes, all types of ice, and all types of dripleaf.
+bullet_break_blocks = true
+#Chance for a newly spawned Pillager to be given a gun. 0.20 = 20%.
+# Default: 0.2
+# Range: 0.0 ~ 1.0
+pillager_gun_chance = 0.2
+#Chance for a newly spawned Zombie, Husk or Drowned to be given a non-revolver gun. 0.05 = 5%.
+# Default: 0.05
+# Range: 0.0 ~ 1.0
+zombie_gun_chance = 0.05
+#Chance for a newly spawned Skeleton, Stray or Bogged to be given a non-revolver gun. 0.05 = 5%.
+# Default: 0.05
+# Range: 0.0 ~ 1.0
+skeleton_gun_chance = 0.05

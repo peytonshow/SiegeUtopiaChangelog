@@ -108,11 +108,11 @@ enabled = true
 	#Sharp horizontal velocity change reactions.
 	[triggers.impact]
 		#When true, sharp horizontal velocity changes can ragdoll the player.
-		enabled = true
+		enabled = false
 		#Minimum horizontal player velocity change over the 3-tick window (m/s) required to trigger.
 		# Default: 16.0
 		# Range: 0.1 ~ 128.0
-		minVelocityDelta = 16.0
+		minVelocityDelta = 32.0
 		#Velocity changes above this (m/s) are ignored as teleports or anomalies rather than physical impacts.
 		# Default: 120.0
 		# Range: 1.0 ~ 1024.0
@@ -121,7 +121,7 @@ enabled = true
 	#Create Big Cannons explosion reactions.
 	[triggers.cannonExplosions]
 		#When true, Create Big Cannons custom explosions can ragdoll nearby players.
-		enabled = true
+		enabled = false
 		#Minimum Create Big Cannons explosion power required to trigger a ragdoll.
 		# Default: 1.0
 		# Range: 0.0 ~ 256.0
@@ -150,7 +150,7 @@ enabled = true
 		#Launch speed multiplier applied to explosion power before the global max launch speed clamp.
 		# Default: 15.0
 		# Range: 0.0 ~ 128.0
-		launchMultiplier = 15.0
+		launchMultiplier = 20.0
 
 	#Hard fall landing reactions.
 	[triggers.fall]
@@ -194,7 +194,7 @@ enabled = true
 	#Lightning strike reactions.
 	[triggers.lightning]
 		#When true, being struck by lightning ragdolls the player.
-		enabled = true
+		enabled = false
 		#Upward launch speed (m/s) when struck by lightning.
 		# Default: 12.0
 		# Range: 0.0 ~ 128.0
@@ -203,7 +203,7 @@ enabled = true
 #Ragdoll reactions for mobs. Separate from the player triggers above; only whitelisted mobs can ragdoll.
 [mobs]
 	#Master switch for all mob ragdoll reactions.
-	enabled = true
+	enabled = false
 
 	#Hard fall landing reactions for mobs.
 	[mobs.fall]

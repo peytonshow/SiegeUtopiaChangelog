@@ -5,9 +5,11 @@
     "#": {
       "item": "utopia:sea_salt_block"
     },
-    "X": {
-      "item": "minecraft:pearlescent_froglight"
-    }
+    "X": [
+      {
+        "item": "minecraft:sea_lantern"
+      }
+    ]
   },
   "pattern": [
     "###",

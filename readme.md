@@ -76,7 +76,7 @@ SOCIETY
     * Honor: Honor is a very limited currency that circulates around the crown. When the treasury is upgraded by storing money inside it, Honor is given to the current King. Honor can be traded in the honor shop for some items or for favours (Mainly calling in troops and mercenaries to fight for you or attack other players)
 * The Law: Players have access to a strong legal framework. Players who learn and uphold the law embolden the King's power, or maybe become Judges or the Sheriff. Players who commit crimes may be imprisoned or sactioned. Depending on how the law is used, it may empower and legitimize the King or turn the people against him.
 * Consecration: Consecrated buidings are officially owned or endorsed by the King marked using a lodestone.
-* Swag: Added clothes, which negate most knockback and provide minor defense. Clothes can be repaired by throwing them into the wash without cost.
+* Swag: Added clothes, which negate most knockback and provide minor defense. Clothes can be repaired for free by throwing them into the wash.
 
 -----------------------------------------------------------------------------------------------------------------
 
@@ -114,6 +114,7 @@ CRAFTING
 
 
 CREATE
+* Drills now require crafting Moissanite as a core component. D
 * Removed Create Washing Gravel into iron. (Automation in this pack shouldn't be indefinite/infinite output from no input. Mining is a more important aspect of Minecraft than automating everything, even if thats what create aims to do. With minor tweaks create should serve to complement vanilla moreso than replace whole parts of it) D
 * Netherite Diving gear now has slighly less protection than Iron Armor rather than sharing stats with Netherite (The immortal netherite chestplate, for starters, was always really confusing to me because there was really no reason not to have one. It costs less than making a normal netherite chestplate for a permanent upgrade to your armor. You may not have noticed this originally, but you can literally just combine the copper pieces of armor with one netherite ingot and an upgrade template. As for the diving helmet, which is also a direct upgrade due to not requiring a diamond helmet, it combined with the backtank lets you breath under lava, undermining potions in the process. All in all, the netherite diving gear in create is kind of baffling to me.)
 * Removed Netherite Diving Gear recipe that uses diamond gear as a base. Now only the  + template + copper diving gear recipes remain, which explain the lower defense as it doesn't use diamond armor as a component.
@@ -124,10 +125,12 @@ CREATE
 * Added the ability to crush Cobbled Deepslate into 3x Gravel. D
 * Added Tumbling Recipes, which are this modpacks way of farming certain minerals. They're similar to base Create's blowing recipes, but use Amethysts. Amethysts have a chance of not being consumed each craft. (Gravel -> Iron, Cobblestone -> Zinc, Red Sand -> Gold, Soul Blocks -> Bones, Red Sand -> Gold, Cobbled Deepslate -> Diamond). D
 * Removed an Oreganized recipe that allowed you to infinitely duplicate lead. D
+* Reworked Lava Recipe (Cobblestone (Superheated) -> Magma Block -> Lava (200mb). Originally, you'd get about 9.5 buckets of lava from one blaze cake, but the new recipe takes significantly less time, which produces enough Magma to produce about 91 buckets of Lava). This also opens up other recipes that use Magma, like Obsidian.
+* Blaze Cakes now require a diamond type (Diamond or Moissanite) material instead of Eggs.
 
 CHEMISTRY
 * Added Chemicals: Hydrogen, Nitrogen, Oxygen, Ammonia, Nitric Acid, Bleach, Propylene Glycol
-* Added Minerals: Moissanite (Scientific Diamond, but has less recipes and is pretty expensive), Graphite (Used for Inkless book and quills and Moissanite), Platinum (Used as a Catalyst. Becomes tarnished between uses and needs to be washed.)
+* Added Minerals: Moissanite (Scientific Diamond, but has less recipes and is pretty expensive), Graphite (Used for Inkless book and quills and Moissanite), Platinum (Used as a Catalyst or for the Strongest tools. Becomes broken arpart between uses and must be recombined. Better than netherite. Obtained from tumbling deepslate, blowing crushed raw silver/gold), Silica Dust (Used for glassware, Moissanite. Can be used in hour glasses)
 * Added Items: Pure Sulfur (Component of Gunpowder), Ammonium Nitrate (Key Component of Gunpowder, alongside Pure Sulfur and Coal), Garbage (Obtained many ways! Useless...)
 
 WORLD
@@ -144,6 +147,8 @@ WORLD
 * Removed Villages, Ruined Portals and D&T Bunkers. Villagers are now mainly found at pillager Bastilles, which are large fortresses found throughout the world. D
 * Removed Iron tools from most overworld surface structures and replaced it with gold. PD
 * Alpha style flowers replace default flowers in most biomes. D
+* Villagers may be turned into Guards using muskets instead of just swords. D
+* Removed vanilla infinite water sources (Infinite water + lava sources can still be made using create's hose pulley and a large enough body of water. Basically you still have infinite water if you live next to a water source) D
 
 FOOD
 * Added Spices: Cinnamon, Pepper and Salt. Spices have almost no nutrition, but decent saturation for how you obtain them (crushing rocks or aging tree bark). Spices can be used to make Season variants of most meats (exluding fish), which are slightly better than their vanilla counterparts. D
@@ -180,6 +185,7 @@ COMBAT
 * Moved Electrum enchantability to Diamond Tier. This puts it in line as an equal alternative to netherite, rather than a total down/upgrade. Electrum avoids the massive slowdown of netherite, but is more involved to earn.
 * Increased Leather armor durability to diamond. Leather serves very breifly as actual armor, so this shouldn't really impact the early game. Past that point, leather is mainly cosmetic, so I felt like it should probably last longer if you make the choice to wear it. D
 * Added Formalwear: Gilded Suit, Classic Suit. Formalwear doesn't do much to protect the wearer and can't be enchanted, but it doesn't slow you down and decreases knockback from damage. Formalwear can be washed to repair it for free.
+* Resin bricks can be thrown. D
 
 ENCHANTING
 * Each item may only have up to 3 Enchantments, not including material-inherit buffs. D
@@ -246,8 +252,15 @@ ADVANCEMENTS
 * Added OG achievements. D
 * [-1 Range] -> Craft a Copper Pickaxe. D
 * [Poorly Behaved Copper Salesman] -> Craft a Copper Sword. D
-* [Sticky Situation] -> Eat a Tube of Glue. D
+* [Glue!] -> Eat a Tube of Glue. D
 * [SEA SALT!] -> Obtain Sea Salt D
+* [Hexagonal Silicon Carbides!] -> Craft Moissanite
+* [My King!] -> Pick up the Crown
+* [Chug Drug] -> Drink Chemicals!
+* [With this Treasure, I Summon...] -> Craft a Warden D
+* [Double Gold] -> Make a Platinum Ingot D
+* [The Strongest of Today] -> Make a Platinum Sword, which is even stroner than Netherite D
+* [Seriously Poor Decision-Making] -> Make a Platinum Hoe D
 
 RESOURCE PACK & LANG
 * Changed "Hot Stuff" achievement desc. to match new Furnace recipe. D

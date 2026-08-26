@@ -6,7 +6,7 @@ StartupEvents.modifyCreativeTab('minecraft:tools_and_utilities', event => {
         'minecraft:copper_shovel'
 
     ])
-    event.addAfter('minecraft:diamond_hoe', [
+    event.addAfter('minecraft:golden_hoe', [
         'utopia:platinum_hoe',
         'utopia:platinum_axe',
         'utopia:platinum_pickaxe',
@@ -22,7 +22,7 @@ StartupEvents.modifyCreativeTab('minecraft:combat', event => {
     event.addAfter('minecraft:stone_axe',[
         'minecraft:copper_axe'
     ])
-    event.addAfter('minecraft:diamond_sword', [
+    event.addAfter('minecraft:golden_sword', [
         'utopia:platinum_sword'
     ])
     event.addAfter('minecraft:diamond_axe',[
@@ -42,8 +42,6 @@ StartupEvents.modifyCreativeTab('minecraft:food_and_drinks', event => {
     event.addAfter('minecraft:cooked_chicken',['utopia:seasoned_cooked_chicken'])
     event.addAfter('minecraft:cooked_mutton',['utopia:seasoned_cooked_mutton'])
     event.addAfter('minecraft:cooked_rabbit',['utopia:seasoned_cooked_rabbit'])
-
-    event.addAfter('utopia:seasoned_cooked_rabbit',['naturalist:bushmeat'])
 })
 
 StartupEvents.modifyCreativeTab('minecraft:ingrediants', event => {

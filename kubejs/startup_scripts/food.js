@@ -111,14 +111,6 @@ ItemEvents.modification(event => {
             canAlwaysEat: false
         })
     })
-    event.modify('utopia:cinnamon', item => {
-        item.setFood({
-            eatSeconds: 1.6,
-            nutrition: 1,
-            saturation: 7,
-            canAlwaysEat: false
-        })
-    })
     event.modify('minecraft:cooked_beef', item => {
         item.setFood({
             eatSeconds: 1.6,

@@ -33,7 +33,7 @@ entityEquipmentChance = 0.0015
 	minimalistCampsites = false
 	#Whether to use wooden chests from other mods when generating campsites
 	#Allowed Values: true, false
-	useModdedChests = true
+	useModdedChests = false
 
 [slots]
 	#When enabled, adds a separate slot for the Snorkel and Night Vision Goggles

@@ -60,6 +60,26 @@ ServerEvents.tags('item', event => {
     event.add('c:hidden_from_recipe_viewers', 'supplementaries:quark/ancient_boat')
     event.add('c:hidden_from_recipe_viewers', 'unusual_furniture:discord')
 
+    event.add('utopia:rare_templates', 'minecraft:netherite_upgrade_smithing_template')
+    event.add('utopia:rare_templates', 'oreganized:electrum_upgrade_smithing_template')
+    event.add('utopia:rare_templates', 'musketmod:musket_upgrade_smithing_template')
+
+    event.add('supplementaries:throwable_bricks', 'minecraft:resin_brick')
+
+    event.add('guardvillagers:convertable_guard_items', 'musketmod:musket')
+    event.add('guardvillagers:convertable_guard_items', 'musketmod:musket_with_bayonet')
+    event.add('guardvillagers:convertable_guard_items', 'musketmod:musket_with_scope')
+    event.add('guardvillagers:convertable_guard_items', 'musketmod:blunderbuss')
+    event.add('guardvillagers:convertable_guard_items', 'musketmod:pistol')
+
+    event.remove('minecraft:enchantable/durability', [
+        'utopia:platinum_sword',
+        'utopia:platinum_pickaxe',
+        'utopia:platinum_axe',
+        'utopia:platinum_shovel',
+        'utopia:platinum_hoe'
+    ])
+
     addBill('utopia:1_dollar_bill')
     addBill('utopia:5_dollar_bill')
     addBill('utopia:20_dollar_bill')

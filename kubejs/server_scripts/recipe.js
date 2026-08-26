@@ -1,85 +1,97 @@
 ServerEvents.recipes(event => {
+
     event.remove({ input: 'minecraft:gravel', type: 'create:splashing' })
-    event.remove({ output: 'oreganized:glance'})
+    event.remove({ output: 'oreganized:glance' })
     event.remove({ output: 'create:brass_ingot', type: 'create:mixing' })
     event.remove({ output: 'minecraft:paper', type: 'minecraft:crafting_shaped' })
     event.remove({ output: 'minecraft:paper', type: 'minecraft:crafting_shapeless' })
+    event.remove({ input: 'minecraft:sugar_cane', output: 'minecraft:sugar'})
     event.remove({ output: 'minecraft:glass_bottle', type: 'minecraft:crafting_shaped' })
     event.remove({ output: 'minecraft:gold_nugget', type: 'create:splashing' })
     event.remove({ output: 'minecraft:mushroom_stew', type: 'minecraft:crafting_shapeless' })
     event.remove({ output: 'minecraft:beetroot_soup', type: 'minecraft:crafting_shapeless' })
+    event.remove({ output: 'create:mechanical_drill' })
+    event.remove({ input: Ingredient.of('#c:cobblestones'), output: Fluid.of('minecraft:lava'),})
     //////
 
-    event.shaped(
-        Item.of('utopia:platinum_sword'),[
-            'A  ',
-            'A  ',
-            'B  '
-        ],{
-            A: 'utopia:platinum_ingot',
-            B: 'minecraft:stick'
-    })
-    event.shaped(
-        Item.of('utopia:platinum_axe'),[
-            'AA ',
-            'AB ',
-            ' B '
-        ],{
-            A: 'utopia:platinum_ingot',
-            B: 'minecraft:stick'
-    })
-    event.shaped(
-        Item.of('utopia:platinum_pickaxe'),[
-            'AAA',
-            ' B ',
-            ' B '
-        ],{
-            A: 'utopia:platinum_ingot',
-            B: 'minecraft:stick'
-    })
-    event.shaped(
-        Item.of('utopia:platinum_hoe'),[
-            'AA ',
-            ' B ',
-            ' B '
-        ],{
-            A: 'utopia:platinum_ingot',
-            B: 'minecraft:stick'
-    })
-    event.shaped(
-        Item.of('utopia:platinum_shovel'),[
-            ' A ',
-            ' B ',
-            ' B '
-        ],{
-            A: 'utopia:platinum_ingot',
-            B: 'minecraft:stick'
+    // Cheapen all cosmetic templates
+    event.forEachRecipe({ type: 'minecraft:crafting_shaped', output: '#minecraft:trim_templates' }, recipe => {
+        let keys = recipe.json.get('key')
+
+        if (keys && keys.has('C') && keys.has('S')) {
+            event.remove({ id: recipe.getId() })
+
+            event.shaped(recipe.originalRecipeResult, [
+                'CSC',
+                'C#C',
+                'CCC'
+            ], {
+                'C': keys.get('C'),
+                'S': keys.get('S'),
+                '#': '#utopia:diamonds'
+            })
+        }
     })
 
+    event.smithing(
+        'utopia:platinum_sword',                     // arg 1: output
+        'utopia:neon_block', // arg 2: the smithing template
+        'minecraft:golden_sword',                          // arg 3: the item to be upgraded
+        'utopia:platinum_ingot'                            // arg 4: the upgrade item
+    )
+    event.smithing(
+        'utopia:platinum_axe',                     // arg 1: output
+        'utopia:neon_block', // arg 2: the smithing template
+        'minecraft:golden_axe',                          // arg 3: the item to be upgraded
+        'utopia:platinum_ingot'                            // arg 4: the upgrade item
+    )
+    event.smithing(
+        'utopia:platinum_pickaxe',                     // arg 1: output
+        'utopia:neon_block', // arg 2: the smithing template
+        'minecraft:golden_pickaxe',                          // arg 3: the item to be upgraded
+        'utopia:platinum_ingot'                            // arg 4: the upgrade item
+    )
+    event.smithing(
+        'utopia:platinum_shovel',                     // arg 1: output
+        'utopia:neon_block', // arg 2: the smithing template
+        'minecraft:golden_shovel',                          // arg 3: the item to be upgraded
+        'utopia:platinum_ingot'                            // arg 4: the upgrade item
+    )
+    event.smithing(
+        'utopia:platinum_hoe',                     // arg 1: output
+        'utopia:neon_block', // arg 2: the smithing template
+        'minecraft:golden_hoe',                          // arg 3: the item to be upgraded
+        'utopia:platinum_ingot'                            // arg 4: the upgrade item
+    )
+
     event.shaped(
-        Item.of('supplementaries:jar'),[
-            'A  ',
-            'B  ',
-            '   '
-        ],{
-            A: '#minecraft:wooden_slabs',
-            B: 'utopia:beaker'
+        Item.of('supplementaries:jar'), [
+        'A  ',
+        'B  ',
+        '   '
+    ], {
+        A: '#minecraft:wooden_slabs',
+        B: 'utopia:beaker'
     })
 
+    // Create Components
 
-    // Shapeless
-    event.shapeless(
-        Item.of('minecraft:gunpowder', 1),[
-            'utopia:pure_sulfur',
-            'minecraft:coal',
-            'utopia:ammonium_nitrate'
-        ])
+    event.shaped(
+        Item.of('create:mechanical_drill'), [
+        ' B ',
+        'BAB',
+        ' C '
+    ], {
+        A: 'utopia:moissanite',
+        B: 'create:andesite_alloy',
+        C: 'create:andesite_casing'
+    })
 
     //////
     event.recipes.create.mixing('create:brass_ingot', [
         'utopia:uneven_raw_brass_precursor'
-    ]).heated()        
-    event.recipes.create.splashing([CreateItem.of('create:crushed_raw_zinc', 0.9),CreateItem.of('create:crushed_raw_copper')], 'utopia:uneven_raw_brass_precursor')
+    ]).heated()
+    event.recipes.create.splashing([CreateItem.of('create:crushed_raw_zinc', 0.9), CreateItem.of('create:crushed_raw_copper')], 'utopia:uneven_raw_brass_precursor')
 
     event.recipes.create.milling(CreateItem.of('create:crushed_raw_copper', 0.8), [
         'minecraft:raw_copper'], 300)
@@ -125,54 +137,75 @@ ServerEvents.recipes(event => {
 
     // Tumbling
     event.recipes.create.mixing([
-        CreateItem.of('minecraft:amethyst_shard', 0.90),
-        CreateItem.of('create:crushed_raw_iron', 0.05)
+        CreateItem.of('create:crushed_raw_iron', 0.50)
     ], [
-       Fluid.of('minecraft:water', 10), 'minecraft:amethyst_shard', 'minecraft:gravel'
-    ])
+        Fluid.of('minecraft:water', 100), 'minecraft:amethyst_shard', '10x minecraft:gravel'
+    ]).processingTime(1000)
+
     event.recipes.create.mixing([
-        CreateItem.of('minecraft:amethyst_shard', 0.80),
-        CreateItem.of('create:crushed_raw_gold', 0.075)
+        CreateItem.of('create:crushed_raw_gold', 0.375)
     ], [
-        Fluid.of('minecraft:water', 10),'minecraft:amethyst_shard', 'minecraft:red_sand'
-    ])
+        Fluid.of('minecraft:water', 50), 'minecraft:amethyst_shard', '5x minecraft:red_sand'
+    ]).processingTime(750)
+
     event.recipes.create.mixing([
-        CreateItem.of('minecraft:amethyst_shard', 0.90),
-        CreateItem.of('1x minecraft:bone', 0.075)
+        CreateItem.of('minecraft:bone', 0.75)
     ], [
-        Fluid.of('minecraft:water', 10),'minecraft:amethyst_shard', Ingredient.of('#minecraft:soul_fire_base_blocks')
-    ])
+        Fluid.of('minecraft:water', 100), 'minecraft:amethyst_shard', '10x #minecraft:soul_fire_base_blocks'
+    ]).processingTime(2000)
+
     event.recipes.create.mixing([
-        CreateItem.of('minecraft:amethyst_shard', 0.25),
-        CreateItem.of('1x minecraft:diamond', 0.005)
+        CreateItem.of('minecraft:diamond', 0.02),
+        CreateItem.of('utopia:platinum_nugget', 0.01)
     ], [
-        Fluid.of('minecraft:water', 10),'minecraft:amethyst_shard',  'minecraft:cobbled_deepslate'
-    ])
+        Fluid.of('minecraft:water', 40), 'minecraft:emerald', 'minecraft:amethyst_shard', '4x minecraft:cobbled_deepslate'
+    ]).processingTime(800)
 
     // Gunpowder
-    event.recipes.create.mixing([
-        CreateItem.of('3x minecraft:gunpowder', 0.85),
-        CreateItem.of('2x minecraft:gunpowder')
+    event.recipes.create.crushing([
+        '5x utopia:pure_sulfur',
+        CreateItem.of('3x utopia:pure_sulfur', 0.5),
+        CreateItem.of('utopia:pure_sulfur', 0.5),
     ], [
-        '8x minecraft:sugar',
-        'minecraft:coal'
+        'minecraft:potent_sulfur'
+    ])
+    event.recipes.create.mixing(
+        CreateItem.of('3x minecraft:gunpowder'),
+        [
+        'utopia:pure_sulfur',
+        'minecraft:coal',
+        'utopia:ammonium_nitrate'
+        ])
+    event.recipes.create.mixing([
+        CreateItem.of('3x minecraft:gunpowder')
+    ], [
+        '3x minecraft:sugar',
+        '2x minecraft:coal'
     ]).heated()
 
-
-    // Spices    
+    // Mill efficiently!
     event.recipes.create.milling([
-        CreateItem.of('utopia:pepper')], [
+        CreateItem.of('2x utopia:pepper'),
+        CreateItem.of('2x utopia:pepper', 0.25)
+        ], [
         'minecraft:blackstone'
     ])
+    event.recipes.create.crushing([
+        CreateItem.of('utopia:pepper, 0.75'),
+        ], [
+        'minecraft:blackstone'
+    ])
+
     event.recipes.create.milling([
-        CreateItem.of('utopia:sea_salt'),
-        CreateItem.of('2x utopia:sea_salt', 0.60)], [
+        CreateItem.of('3x utopia:sea_salt'),
+        CreateItem.of('utopia:sea_salt', 0.75)], [
         'minecraft:calcite'
     ])
-    Ingredient.of('#utopia:spices').stacks.forEach(item => {
-        event.remove({ input: item, type: 'create:crush' })
-    })
-
+    event.recipes.create.crushing([
+        CreateItem.of('utopia:sea_salt')
+        ], [
+        'minecraft:calcite'
+    ])
 
     // Gravel
     event.recipes.create.crushing([
@@ -187,25 +220,20 @@ ServerEvents.recipes(event => {
 
     // Moissanite & Graphite
     event.recipes.create.compacting([
-        CreateItem.of('utopia:graphite_ingot', 0.95),
+        CreateItem.of('utopia:graphite_ingot'),
     ], [
         'minecraft:coal_block'
-    ]).heated()
+    ]).heated().processingTime(1000)
     event.recipes.create.compacting([
         CreateItem.of('utopia:moissanite', 0.60),
     ], [
-        '12x utopia:silica_dust',
-        '12x utopia:graphite_ingot'
+        '6x utopia:silica_dust',
+        '3x utopia:graphite_ingot',
+        '15x minecraft:emerald'
     ]).superheated()
-     event.recipes.create.deploying('utopia:pencil', ['minecraft:stick', 'utopia:graphite_ingot'])
+    event.recipes.create.deploying('utopia:pencil', ['minecraft:stick', 'utopia:graphite_ingot'])
 
     // Silica
-    event.recipes.create.crushing([
-        CreateItem.of('farmersdelight:rice', 0.50),
-        CreateItem.of('utopia:silica_dust', 0.15)
-    ], [
-        'farmersdelight:rice_panicle'
-    ])
     event.recipes.create.milling([
         '3x utopia:silica_dust'
     ], [
@@ -299,7 +327,7 @@ ServerEvents.recipes(event => {
     ]).heated()
     event.recipes.create.mixing([
         Fluid.of('utopia:ammonia', 400),
-        'utopia:tarnished_platinum_ingot'
+        '9x utopia:platinum_nugget'
     ], [
         Fluid.of('utopia:nitric_acid', 200),
         Fluid.of('utopia:liquid_oxygen', 200),
@@ -312,12 +340,24 @@ ServerEvents.recipes(event => {
         'minecraft:glass_bottle',
         'minecraft:heart_of_the_sea'
     ]).heated()
-    event.recipes.create.crushing([
-        '2x utopia:pure_sulfur',
-        CreateItem.of('utopia:pure_sulfur', 0.5),
-        CreateItem.of('utopia:pure_sulfur', 0.5),
+    event.recipes.create.compacting([
+        Fluid.of('minecraft:water', 200),
+        'minecraft:blue_ice',
+        'minecraft:heart_of_the_sea'
     ], [
-        'minecraft:potent_sulfur'
+        'minecraft:blue_ice',
+        'minecraft:heart_of_the_sea'
+    ]).heated()
+    event.recipes.create.mixing([
+        'minecraft:magma_block',
+    ], [
+       Ingredient.of('#c:cobblestones')
+    ]).superheated().processingTime(30)
+
+    event.recipes.create.compacting([
+        Fluid.of('minecraft:lava', 50),
+    ], [
+        'minecraft:magma_block',
     ])
 
     // Exp Farm
@@ -333,24 +373,23 @@ ServerEvents.recipes(event => {
     event.recipes.create.splashing([
         '9x minecraft:gold_nugget',
         CreateItem.of('minecraft:quartz', 0.5),
-        CreateItem.of('utopia:platinum_nugget', 0.01)
+        CreateItem.of('utopia:platinum_nugget', 0.02)
     ], [
         'create:crushed_raw_gold'
     ])
     event.recipes.create.splashing([
-        'utopia:platinum_ingot'
+        CreateItem.of('9x oreganized:silver_nugget'),
+        CreateItem.of('utopia:platinum_nugget', 0.1)
     ], [
-        'utopia:tarnished_platinum_ingot'
+        'create:crushed_raw_silver'
     ])
 
     event.recipes.create.mechanical_crafting('minecraft:warden_spawn_egg', [
-        ' EEE ',
-        'EIIIE',
+        'XEEEX',
         'EJIJE',
         'EIXIE',
         'EJIJE',
-        'EIIIE',
-        ' EEE '
+        'XEEEX'
     ], {
         E: 'minecraft:echo_shard',
         J: 'quark:diamond_heart',

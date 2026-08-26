@@ -1,11 +1,10 @@
 {
+  "item.quark.bottled_cloud": "Bottled Cloud",
+  "block.farmersdelight.cutting_board": "Board",
   "create_central_kitchen.recipe.farmersdelight.automatic_food_cutting": "Automatic Board Application",
   "chat.type.advancement.challenge": "%s has completed %s",
   "chat.type.advancement.goal": "%s has reached %s",
   "chat.type.advancement.task": "%s has earned %s",
-  "item.create_permits.diamondpermit": "Royal Production Permit",
-  "item.create_permits.gold_permit": "Arms Production Permit",
-  "item.create_permits.ironpermit": "Law Degree",
   "utopia.info.the_nether": "The Nether.\nThe only way to reach The Nether is to stand on the bottom of the world or build portal made of Glowstone. The portal needs to be lit, but corners do not need to be filled.",
   "utopia.info.campfire_normal": "Campfires can be built manually with Firewood, a piece of coal and a light. Campfires can also be built using a Firecharge in a crafting table.",
   "utopia.info.campfire_nether": "Soul Campfires can be built manually with Firewood, a piece of soul sand and a light. Soul Campfires can also be built using a Firecharge in a crafting table.",
@@ -14,7 +13,7 @@
   "utopia.info.catalyst": "Catalysts contain special living compounds that react with certain surrounding minerals on its surface.",//nf
   "utopia.info.tumbling": "Amethysts can be used to produce minerals through a process called tumbling. They slowly grind away rock to dust, which is absorbed by water and drained, leaving only metal or gems.",//nf
   "utopia.info.fluid": "Infinite fluid can be achieved by using a Spout to suck up water from a a source",//nf
-  "utopia.info.platinum": "Platinum is an extremely rare resource, even rarer than gold. You wont find any underground, but you can occasionally wash up some specs from blowing gold. Platinum isn't practicle for tools, but it's a perfect catalyst for certain chemical reactions.",
+  "utopia.info.platinum": "Platinum is an extremely rare resource, even rarer than gold. You wont find any underground, but you can occasionally wash up some specs from blowing gold.  but it's a perfect catalyst for certain chemical reactions.",
   "farmersdelight.tooltip.cooking_pot.empty": "Empty",
   "block.minecraft.blast_furnace": "Kiln",
   "container.blast_furnace": "Kiln",
@@ -32,7 +31,7 @@
   "advancements.utop.lend_me_your_power.title": "LEND ME YOUR POWER!!!",  // Just in case
   "advancements.utop.lend_me_your_power.description": "Obtain a noble gas",
   "advancements.utop.sticky_situation.title": "Glue!",
-  "advancements.utop.sticky_situation.description": "Eat Glue. My favorite tube!",
+  "advancements.utop.sticky_situation.description": "Try my Glue!",
   "advancements.utop.almost_diamond.title": "Hexagonal Silicon Carbides!",
   "advancements.utop.almost_diamond.description": "Make artificial Diamonds using Science",
   "advancements.utop.my_king.title": "My King!",
@@ -42,5 +41,11 @@
   "advancements.utop.rapid_cell_decay.title": "Rapid Cell Decay",
   "advancements.utop.rapid_cell_decay.description": "Drink an extremely dangerous chemical",
   "advancements.utop.with_this_treasure.title": "With this Treasure, I Summon...",
-  "advancements.utop.with_this_treasure.description": "Create a weapon of Mass-Destruction."
+  "advancements.utop.with_this_treasure.description": "Create a weapon of Mass-Destruction",
+  "advancements.utop.double_gold.title": "Double Gold",
+  "advancements.utop.double_gold.description": "Obtain a Platinum Ingot, the strongest material",
+  "advancements.utop.the_strongest_of_today.title": "The Strongest of Today",
+  "advancements.utop.the_strongest_of_today.description": "Craft a Platinum Sword",
+  "advancements.utop.serious_poor_choices.title": "Seriously Poor Decision-Making",
+  "advancements.utop.serious_poor_choices.description": "Waste a Platinum Ingot"
 }

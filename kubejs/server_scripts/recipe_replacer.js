@@ -4,7 +4,8 @@ ServerEvents.recipes(event => {
             not: [
                 { output: 'minecraft:enchanting_table' },
                 { output: 'minecraft:diamond_block' },
-                { type: 'minecraft:smithing_trim' }
+                { input: '#utopia:rare_templates' },
+                { input: '#minecraft:trim_templates' }
             ]
         },
         'minecraft:diamond',   // What to replace

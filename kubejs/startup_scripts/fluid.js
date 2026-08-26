@@ -7,11 +7,12 @@ StartupEvents.registry('fluid', event => {
     .tint(0xAFEEEE)
     .type(type => type
       .renderType(3)
-      .stillTexture('kubejs:block/gas_still')
-      .flowingTexture('kubejs:block/gas_flow')
       .fallDistanceModifier(0)
       //.addDripstoneDripping(1, $ParticleTypes.DRIPPING_DRIPSTONE_WATER, 'minecraft:water_cauldron', $SoundEvents.POINTED_DRIPSTONE_DRIP_WATER)
     )
+    .stillTexture('kubejs:block/gas_still')
+    .flowingTexture('kubejs:block/gas_flow')
+    .translucent()
     .noBlock()
     .noBucket()
 
@@ -20,11 +21,11 @@ StartupEvents.registry('fluid', event => {
     .tint(0xFFFFFF)
     .type(type => type
       .renderType(3)
-      .stillTexture('kubejs:block/gas_still')
-      .flowingTexture('kubejs:block/gas_flow')
       .fallDistanceModifier(0)
-      //.addDripstoneDripping(1, $ParticleTypes.DRIPPING_DRIPSTONE_WATER, 'minecraft:water_cauldron', $SoundEvents.POINTED_DRIPSTONE_DRIP_WATER)
     )
+    .stillTexture('kubejs:block/gas_still')
+    .flowingTexture('kubejs:block/gas_flow')
+    .translucent()
     .noBlock()
     .noBucket()
 
@@ -33,10 +34,11 @@ StartupEvents.registry('fluid', event => {
     .tint(0xE0F7FA)
     .type(type => type
       .renderType(3)
-      .stillTexture('kubejs:block/gas_still')
-      .flowingTexture('kubejs:block/gas_flow')
       .fallDistanceModifier(0)
     )
+    .stillTexture('kubejs:block/gas_still')
+    .flowingTexture('kubejs:block/gas_flow')
+    .translucent()
     .noBlock()
     .noBucket()
 
@@ -45,10 +47,11 @@ StartupEvents.registry('fluid', event => {
     .tint(0x9D4EDD)
     .type(type => type
       .renderType(3)
-      .stillTexture('kubejs:block/gas_still')
-      .flowingTexture('kubejs:block/gas_flow')
       .fallDistanceModifier(0)
     )
+    .stillTexture('kubejs:block/gas_still')
+    .flowingTexture('kubejs:block/gas_flow')
+    .translucent()
     .noBlock()
     .noBucket()
 
@@ -57,10 +60,11 @@ StartupEvents.registry('fluid', event => {
     .tint(0x8B4513)
     .type(type => type
       .renderType(3)
-      .stillTexture('kubejs:block/gas_still')
-      .flowingTexture('kubejs:block/gas_flow')
       .fallDistanceModifier(0)
     )
+    .stillTexture('kubejs:block/thin_fluid_still')
+    .flowingTexture('kubejs:block/thin_fluid_flow')
+    .translucent()
     .noBlock()
     .noBucket()
 
@@ -69,20 +73,22 @@ StartupEvents.registry('fluid', event => {
     .tint(0x39FF14)
     .type(type => type
       .renderType(3)
-      .stillTexture('kubejs:block/gas_still')
-      .flowingTexture('kubejs:block/gas_flow')
       .fallDistanceModifier(0)
     )
+    .stillTexture('kubejs:block/soupy_still')
+    .flowingTexture('kubejs:block/soupy_flow')
+    .translucent()
 
   event.create('utopia:propylene_glycol')
     .displayName('Propylene Glycol')
     .tint(0x36454F)
     .type(type => type
       .renderType(3)
-      .stillTexture('kubejs:block/gas_still')
-      .flowingTexture('kubejs:block/gas_flow')
       .fallDistanceModifier(0)
     )
+    .stillTexture('kubejs:block/soupy_still')
+    .flowingTexture('kubejs:block/soupy_flow')
+    .translucent()
     .noBlock()
     .noBucket()
 })

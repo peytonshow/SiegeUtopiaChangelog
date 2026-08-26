@@ -5,10 +5,6 @@
   "toughnessWeight": 0.5,
   "knockbackWeight": 8.0,
   "itemOverrides": {
-    "aeronautics:aviators_goggles": {
-      "useCustomWeight": false,
-      "customWeight": 1.0
-    },
     "create:cardboard_boots": {
       "useCustomWeight": false,
       "customWeight": 1.0
@@ -60,6 +56,14 @@
     "endermanoverhaul:snowy_hood": {
       "useCustomWeight": false,
       "customWeight": 5.0
+    },
+    "irons_artifice:cowboy_hat": {
+      "useCustomWeight": false,
+      "customWeight": 11.0
+    },
+    "irons_artifice:tricorne": {
+      "useCustomWeight": false,
+      "customWeight": 11.0
     },
     "minecraft:chainmail_boots": {
       "useCustomWeight": false,
@@ -264,6 +268,10 @@
     "utopia:used_shackles": {
       "useCustomWeight": true,
       "customWeight": 5.0
+    },
+    "aeronautics:aviators_goggles": {
+      "useCustomWeight": false,
+      "customWeight": 1.0
     },
     "create_sa:andesite_exoskeleton_chestplate": {
       "useCustomWeight": false,

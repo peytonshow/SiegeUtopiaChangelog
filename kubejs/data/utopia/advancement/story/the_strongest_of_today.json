@@ -1,0 +1,32 @@
+{
+  "parent": "utopia:story/double_gold",
+  "criteria": {
+    "platinum_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "utopia:platinum_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.utop.the_strongest_of_today.description"
+    },
+    "icon": {
+      "id": "utopia:platinum_sword"
+    },
+    "title": {
+      "translate": "advancements.utop.the_strongest_of_today.title"
+    }
+  },
+  "requirements": [
+    [
+      "platinum_sword"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
