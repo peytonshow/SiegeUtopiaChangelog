@@ -32,8 +32,6 @@ StartupEvents.modifyCreativeTab('minecraft:combat', event => {
 
 StartupEvents.modifyCreativeTab('kubejs:kubejs', event => {
 	event.remove('utopia:incomplete_netherite_boots','utopia:incomplete_netherite_leggings', 'utopia:incomplete_netherite_chestplate', 'utopia:incomplete_netherite_helmet')
-	event.remove('utopia:tarnished_platinum_ingot')
-
 })
 
 StartupEvents.modifyCreativeTab('minecraft:food_and_drinks', event => {
@@ -49,4 +47,5 @@ StartupEvents.modifyCreativeTab('minecraft:ingrediants', event => {
     event.addAfter('minecraft:lapis_lazuli',['utopia:moissanite'])
     event.addAfter('oreganized:silver_ingot',['utopia:platinum_ingot'])
     event.addAfter('minecraft:clay_ball',['utopia:silica_dust'])
+    event.addAfter('minecraft:experience_bottle',['quark:cloud'])
 })

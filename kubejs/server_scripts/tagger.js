@@ -1,5 +1,6 @@
 ServerEvents.tags('item', event => {
 
+    //7574201914505645599
     const addBill = (item) => {
         event.add('utopia:bills', item)
         event.add('utopia:currency', item)
@@ -44,7 +45,6 @@ ServerEvents.tags('item', event => {
     event.add('c:hidden_from_recipe_viewers', 'vc_gliders:reinforced_paper_gold')
     event.add('c:hidden_from_recipe_viewers', 'vc_gliders:reinforced_paper_diamond')
     event.add('c:hidden_from_recipe_viewers', 'vc_gliders:reinforced_paper_netherite')
-    event.add('c:hidden_from_recipe_viewers', 'naturalist:cooked_egg')
     event.add('c:hidden_from_recipe_viewers', 'frame_changer:crying_obsidian_brick_slab')
     event.add('c:hidden_from_recipe_viewers', 'frame_changer:crying_polished_obsidian_stairs')
     event.add('c:hidden_from_recipe_viewers', 'frame_changer:crying_obsidian_brick_stairs')
@@ -55,9 +55,9 @@ ServerEvents.tags('item', event => {
     event.add('c:hidden_from_recipe_viewers', 'frame_changer:crying_polished_obsidian_slab')
     event.add('c:hidden_from_recipe_viewers', 'artifacts:eternal_steak')
     event.add('c:hidden_from_recipe_viewers', 'artifacts:everlasting_beef')
-    event.add('c:hidden_from_recipe_viewers', 'supplementaries:quark/way_sign_ancient')
-    event.add('c:hidden_from_recipe_viewers', 'supplementaries:quark/cannon_boat_ancient')
-    event.add('c:hidden_from_recipe_viewers', 'supplementaries:quark/ancient_boat')
+    // event.add('c:hidden_from_recipe_viewers', 'supplementaries:quark/way_sign_ancient')
+    // event.add('c:hidden_from_recipe_viewers', 'supplementaries:quark/cannon_boat_ancient')
+    // event.add('c:hidden_from_recipe_viewers', 'supplementaries:quark/ancient_boat')
     event.add('c:hidden_from_recipe_viewers', 'unusual_furniture:discord')
 
     event.add('utopia:rare_templates', 'minecraft:netherite_upgrade_smithing_template')

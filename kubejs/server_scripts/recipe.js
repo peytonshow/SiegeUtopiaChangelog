@@ -234,6 +234,14 @@ ServerEvents.recipes(event => {
     event.recipes.create.deploying('utopia:pencil', ['minecraft:stick', 'utopia:graphite_ingot'])
 
     // Silica
+    event.recipes.create.mixing([
+        CreateItem.of('7x utopia:silica_dust'),
+        CreateItem.of('6x utopia:silica_dust', 0.9),
+        CreateItem.of('2x minecraft:quartz', 0.4)
+    ], [
+        'minecraft:quartz_block',
+        Fluid.of('utopia:nitric_acid', 100)
+    ]).processingTime(160)
     event.recipes.create.milling([
         '3x utopia:silica_dust'
     ], [
@@ -252,15 +260,15 @@ ServerEvents.recipes(event => {
     event.recipes.create.compacting([
         CreateItem.of('utopia:beaker'),
     ], [
-        '3x utopia:silica_dust',
-        'minecraft:glass_bottle'
+        '1x minecraft:black_dye',
+        '2x minecraft:glass_bottle'
     ]).heated()
 
     // Chemistry!!!
     const beakers = [
-        { full: 'utopia:beaker_nitrogen', empty: 'utopia:beaker', fluid: 'utopia:liquid_nitrogen', amount: 200 },
-        { full: 'utopia:beaker_oxygen', empty: 'utopia:beaker', fluid: 'utopia:liquid_oxygen', amount: 200 },
-        { full: 'utopia:beaker_hydrogen', empty: 'utopia:beaker', fluid: 'utopia:liquid_hydrogen', amount: 200 },
+        { full: 'utopia:beaker_nitrogen', empty: 'utopia:beaker', fluid: 'utopia:nitrogen', amount: 200 },
+        { full: 'utopia:beaker_oxygen', empty: 'utopia:beaker', fluid: 'utopia:oxygen', amount: 200 },
+        { full: 'utopia:beaker_hydrogen', empty: 'utopia:beaker', fluid: 'utopia:hydrogen', amount: 200 },
         { full: 'utopia:beaker_ammonia', empty: 'utopia:beaker', fluid: 'utopia:ammonia', amount: 200 },
         { full: 'utopia:beaker_nitric_acid', empty: 'utopia:beaker', fluid: 'utopia:nitric_acid', amount: 200 },
         { full: 'utopia:beaker_bleach', empty: 'utopia:beaker', fluid: 'utopia:bleach', amount: 200 },
@@ -272,9 +280,11 @@ ServerEvents.recipes(event => {
         event.recipes.create.filling(item.full, [Fluid.of(item.fluid, item.amount), item.empty]);
     }
 
+    event.recipes.create.filling('supplementaries:lumisene_bottle', [Fluid.of('supplementaries:lumisene', 250), 'minecraft:glass_bottle'])
+
     event.recipes.create.compacting([
         'minecraft:glass_bottle',
-        Fluid.of('utopia:liquid_nitrogen', 50),
+        Fluid.of('utopia:nitrogen', 50),
     ], [
         'quark:bottled_cloud',
     ])
@@ -282,12 +292,12 @@ ServerEvents.recipes(event => {
         Fluid.of('utopia:propylene_glycol', 100)
     ], [
         'minecraft:coal',
-        Fluid.of('utopia:liquid_hydrogen', 80),
-        Fluid.of('utopia:liquid_oxygen', 20)
+        Fluid.of('utopia:hydrogen', 120),
+        Fluid.of('utopia:oxygen', 40)
     ]).superheated()
     event.recipes.create.mixing([
-        Fluid.of('utopia:liquid_oxygen', 80),
-        Fluid.of('utopia:liquid_hydrogen', 120)
+        Fluid.of('utopia:oxygen', 80),
+        Fluid.of('utopia:hydrogen', 120)
     ], [
         Fluid.of('minecraft:water', 200),
         Ingredient.of('#utopia:electricity')
@@ -302,15 +312,16 @@ ServerEvents.recipes(event => {
     event.recipes.create.mixing([
         Fluid.of('utopia:nitric_acid', 200)
     ], [
-        Fluid.of('utopia:liquid_nitrogen', 200),
+        Fluid.of('utopia:nitrogen', 200),
         Fluid.of('minecraft:water', 500)
     ])
     event.recipes.create.compacting([
-        CreateItem.of('utopia:neon_block', 0.15),
+        CreateItem.of('utopia:neon_block', 0.25),
         '16x minecraft:glass_bottle'
     ], [
+        'oreganized:electrum_nugget',
         '16x quark:bottled_cloud',
-        Fluid.of('utopia:propylene_glycol', 100)
+        Fluid.of('utopia:propylene_glycol', 500)
     ]).processingTime(6000)
     event.recipes.create.mixing([
         Fluid.of('utopia:bleach', 200)
@@ -322,15 +333,15 @@ ServerEvents.recipes(event => {
     event.recipes.create.mixing([
         Fluid.of('utopia:ammonia', 400)
     ], [
-        Fluid.of('utopia:liquid_nitrogen', 200),
-        Fluid.of('utopia:liquid_hydrogen', 200)
+        Fluid.of('utopia:nitrogen', 200),
+        Fluid.of('utopia:hydrogen', 200)
     ]).heated()
     event.recipes.create.mixing([
         Fluid.of('utopia:ammonia', 400),
         '9x utopia:platinum_nugget'
     ], [
         Fluid.of('utopia:nitric_acid', 200),
-        Fluid.of('utopia:liquid_oxygen', 200),
+        Fluid.of('utopia:oxygen', 200),
         'utopia:platinum_ingot'
     ]).heated().processingTime(600)
     event.recipes.create.compacting([
@@ -385,16 +396,17 @@ ServerEvents.recipes(event => {
     ])
 
     event.recipes.create.mechanical_crafting('minecraft:warden_spawn_egg', [
-        'XEEEX',
-        'EJIJE',
-        'EIXIE',
-        'EJIJE',
-        'XEEEX'
+        'IEJEI',
+        'EEXEE',
+        'JXSXJ',
+        'EEXEE',
+        'IEJEI'
     ], {
         E: 'minecraft:echo_shard',
         J: 'quark:diamond_heart',
-        I: 'minecraft:sculk',
-        X: 'minecraft:sculk_catalyst'
+        I: 'utopia:neon_block',
+        X: 'minecraft:sculk_catalyst',
+        S: 'minecraft:sculk_shrieker'
     })
 
     // Remove crushing for milled-only items

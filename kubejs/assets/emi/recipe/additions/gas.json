@@ -1,0 +1,10 @@
+{
+  "type": "emi:info",
+  "stacks": [
+    "fluid:utopia:oxygen",
+    "fluid:utopia:hydrogen",
+    "fluid:utopia:nitrogen",
+    "fluid:utopia:ammonia"
+  ],
+  "text": "utopia.info.gas"
+}

@@ -2,8 +2,8 @@ const $SoundEvents = Java.loadClass('net.minecraft.sounds.SoundEvents')
 const $ParticleTypes = Java.loadClass('net.minecraft.core.particles.ParticleTypes')
 
 StartupEvents.registry('fluid', event => {
-  event.create('utopia:liquid_oxygen')
-    .displayName('Liquid Oxygen')
+  event.create('utopia:oxygen')
+    .displayName('Oxygen')
     .tint(0xAFEEEE)
     .type(type => type
       .renderType(3)
@@ -15,9 +15,10 @@ StartupEvents.registry('fluid', event => {
     .translucent()
     .noBlock()
     .noBucket()
+    .tag('utopia:gas')
 
-  event.create('utopia:liquid_hydrogen')
-    .displayName('Liquid Hydrogen')
+  event.create('utopia:hydrogen')
+    .displayName('Hydrogen')
     .tint(0xFFFFFF)
     .type(type => type
       .renderType(3)
@@ -28,9 +29,10 @@ StartupEvents.registry('fluid', event => {
     .translucent()
     .noBlock()
     .noBucket()
+    .tag('utopia:gas')
 
-  event.create('utopia:liquid_nitrogen')
-    .displayName('Liquid Nitrogen')
+  event.create('utopia:nitrogen')
+    .displayName('Nitrogen')
     .tint(0xE0F7FA)
     .type(type => type
       .renderType(3)
@@ -41,6 +43,7 @@ StartupEvents.registry('fluid', event => {
     .translucent()
     .noBlock()
     .noBucket()
+    .tag('utopia:gas')
 
   event.create('utopia:ammonia')
     .displayName('Ammonia')
@@ -54,6 +57,7 @@ StartupEvents.registry('fluid', event => {
     .translucent()
     .noBlock()
     .noBucket()
+    .tag('utopia:gas')
 
   event.create('utopia:nitric_acid')
     .displayName('Nitric Acid')

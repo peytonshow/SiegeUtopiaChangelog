@@ -1,5 +1,8 @@
 {
-  "item.quark.bottled_cloud": "Bottled Cloud",
+  "advancement.create.mechanical_pump_0.desc": "Place and power a Mechanical Fluid Pump",
+  "advancement.create.water_supply.desc": "Use the pulling end of a Fluid Pipe or Mechanical Fluid Pump to collect water",
+  "block.create.mechanical_pump": "Mechanical Fluid Pump",
+  "item.quark.bottled_cloud": "Bottle o' Sky",
   "block.farmersdelight.cutting_board": "Board",
   "create_central_kitchen.recipe.farmersdelight.automatic_food_cutting": "Automatic Board Application",
   "chat.type.advancement.challenge": "%s has completed %s",
@@ -13,7 +16,9 @@
   "utopia.info.catalyst": "Catalysts contain special living compounds that react with certain surrounding minerals on its surface.",//nf
   "utopia.info.tumbling": "Amethysts can be used to produce minerals through a process called tumbling. They slowly grind away rock to dust, which is absorbed by water and drained, leaving only metal or gems.",//nf
   "utopia.info.fluid": "Infinite fluid can be achieved by using a Spout to suck up water from a a source",//nf
-  "utopia.info.platinum": "Platinum is an extremely rare resource, even rarer than gold. You wont find any underground, but you can occasionally wash up some specs from blowing gold.  but it's a perfect catalyst for certain chemical reactions.",
+  "utopia.info.platinum": "Platinum is an extremely rare resource, even rarer than gold. You wont find any just from mining, but you can occasionally wash up some specks from blowing gold. Platinum is the strongest material in terms of combat and tools, but is incredibly fragile.",
+  "utopia.info.gas": "Gasses can be safely spouted into the atmosphere using mechanical pumps, presumably with no long-term effects on the planet.", //nf
+
   "farmersdelight.tooltip.cooking_pot.empty": "Empty",
   "block.minecraft.blast_furnace": "Kiln",
   "container.blast_furnace": "Kiln",
