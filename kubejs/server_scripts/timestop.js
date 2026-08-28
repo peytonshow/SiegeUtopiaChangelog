@@ -1,10 +1,10 @@
 const ClientboundSetTimePacket = Java.loadClass('net.minecraft.network.protocol.game.ClientboundSetTimePacket');
 
 const ITEM_ID = 'utopia:platinum_pocketwatch';
-const TOTAL_ABILITY_DURATION_SECONDS = 60; 
+const TOTAL_ABILITY_DURATION_SECONDS = 50; 
 const GRACE_PERIOD_SECONDS = 10; 
 
-const MAX_DAY_SPEED_MULTIPLIER = 160000; 
+const MAX_DAY_SPEED_MULTIPLIER = 200000; 
 const ACCELERATION_EASE_EXPONENT = 5.0; 
 
 const VANILLA_DAY_TICKS_PER_SECOND = 20; 
@@ -20,15 +20,13 @@ const TORCH_SET = new Set([
     'minecraft:soul_wall_torch'
 ]);
 
-console.info('[MadeInHeaven] script file loaded, listening for right-click on ' + ITEM_ID);
-
 ItemEvents.rightClicked(ITEM_ID, event => {
     let player = event.player;
     let server = event.server;
     let username = player.username;
 
     if (activeUsers[username]) {
-        player.tell('§7Made in Heaven is already active...');
+        player.tell('§7Acceleration is already active...');
         return;
     }
 
@@ -56,7 +54,7 @@ ItemEvents.rightClicked(ITEM_ID, event => {
     
     server.runCommandSilent('weather clear');
     
-    console.info('[MadeInHeaven] activated for ' + username);
+    console.info('Acceleration activated for ' + username);
 });
 
 ServerEvents.tick(event => {
@@ -251,7 +249,7 @@ ServerEvents.tick(event => {
                 }
             }
         } catch (e) {
-            console.error('[MadeInHeaven] tick error processing ' + username + ': ' + e);
+            console.error('Acceleration tick error processing ' + username + ': ' + e);
         }
     }
 });
@@ -267,7 +265,7 @@ function endMadeInHeaven(server, player, data) {
         let packet = new ClientboundSetTimePacket(newGameTime, newGameTime, false);
         player.connection.send(packet);
         
-        console.info(`[MadeInHeaven] Added ${bonusTicks} bonus ticks (${data.bonusDayCount} days) to total world time.`);
+        console.info(`Added ${bonusTicks} bonus ticks (${data.bonusDayCount} days) to total world time.`);
     }
 
     server.runCommandSilent('tick rate 20');
@@ -285,8 +283,7 @@ function endMadeInHeaven(server, player, data) {
 
     server.runCommandSilent(`execute as ${username} at ${username} run playsound minecraft:entity.warden.death master @s ~ ~ ~ 1.0 1.0`);
     server.runCommandSilent(`weather thunder`);
-    
-    player.tell('§7Made in Heaven... ends.');
+
 
     if (data) {
         data.ending = true;

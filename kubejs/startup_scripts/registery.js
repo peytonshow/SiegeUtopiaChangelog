@@ -50,9 +50,12 @@ StartupEvents.registry('item', event => {
     event.create('utopia:beaker_propylene_glycol').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/propylene_glycol').displayName('Propylene Glycol').useAnimation('drink')
     event.create('utopia:ammonium_nitrate').tag('utopia:chemistry').texture('utopia:item/ammonium_nitrate').displayName('Ammonium Nitrate')
     event.create('utopia:pure_sulfur').tag('utopia:chemistry').texture('utopia:item/sulphur').displayName('Sulfur Dust')
+    event.create('utopia:plastic_ingot').displayName('Plastic').texture('utopia:item/plastic')
 
     // Electricity
     //event.create('utopia:battery_charged').displayName('Graphite').texture('utopia:item/graphite_ingot')
+    event.create('utopia:wire').displayName('Wire').texture('utopia:item/wire')
+    event.create('utopia:circuit').displayName('Circuit').texture('utopia:item/circuit_board')
 
     // Ingots
     event.create('utopia:graphite_ingot').displayName('Graphite').texture('utopia:item/graphite_ingot').tag('c:ingots').tag('c:ingots/graphite')
