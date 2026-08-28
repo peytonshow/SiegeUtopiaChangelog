@@ -75,7 +75,7 @@ StartupEvents.registry('item', event => {
 
     // Misc Tools
     event.create('utopia:pencil', 'sword').tier('pencil')
-    event.create('utopia:hammer').maxDamage(32)
+    event.create('utopia:platinum_pocketwatch').maxDamage(32)
 
     // Stamps
     event.create('utopia:encoder_stamp').displayName('Encoder Stamp').texture('utopia:item/encoder_stamp').rarity('rare').tag('utopia:stamp')

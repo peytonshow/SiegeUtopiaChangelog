@@ -31,7 +31,7 @@ ItemEvents.modification(event => {
     })
 
     event.modify('minecraft:golden_sword', item => {
-        item.maxDamage = 170
+        item.maxDamage = 150
     })
     event.modify('minecraft:golden_axe', item => {
         item.maxDamage = 170

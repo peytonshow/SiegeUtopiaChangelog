@@ -1,7 +1,7 @@
 #Only damage tools by 1 durability instead of 2 when attacking. Apply the same logic to swords when harvesting blocks.
 #Default Value: true
 #Requires Restart: Game
-no_item_durability_penalty = true
+no_item_durability_penalty = false
 #Overrides for setting and balancing attack damage values of items.
 #Takes precedence over any changes made by "legacy_attack_damage" option, but requires it to be enabled.
 #As with all items, this value is added ON TOP of the default attack strength of the player (which is 1.0 by default).
@@ -16,4 +16,4 @@ boost_sharpness = false
 #Revert weapon and tool attack damage to legacy values.
 #Default Value: true
 #Requires Restart: Game
-legacy_attack_damage_values = true
+legacy_attack_damage_values = false
