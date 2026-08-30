@@ -48,6 +48,7 @@ key_key.astikorcartsredux.action:key.keyboard.r:
 key_key.astikorcartsredux.slow:key.keyboard.z:
 key_key.curios.open.desc:key.keyboard.unknown:
 key_key.fast_placement:key.keyboard.unknown:
+key_chunksfadein.keybinds.toggleMod:key.keyboard.unknown:
 key_key.jei.toggleOverlay:key.keyboard.unknown:
 key_key.jei.focusSearch:key.keyboard.unknown:
 key_key.jei.previousPage:key.keyboard.unknown:
@@ -76,6 +77,7 @@ key_key.jei.toggleEditMode:key.keyboard.unknown:
 key_key.jei.toggleHideIngredient:key.keyboard.unknown:
 key_key.jei.toggleWildcardHideIngredient:key.keyboard.unknown:
 key_key.jei.recipeBack:key.keyboard.backspace:
+key_key.jei.recipeForward:key.keyboard.unknown:
 key_key.jei.previousRecipePage:key.keyboard.page.up:
 key_key.jei.nextRecipePage:key.keyboard.page.down:
 key_key.jei.pauseRecipeCycling:key.keyboard.left.shift:
@@ -91,13 +93,13 @@ key_key.scholar.remove_page_left:key.keyboard.delete:SHIFT
 key_key.scholar.insert_empty_page_right:key.keyboard.insert:ALT
 key_key.scholar.remove_page_right:key.keyboard.delete:ALT
 key_key.push_to_talk:key.keyboard.unknown:
-key_key.whisper:key.keyboard.h:
+key_key.whisper:key.keyboard.unknown:
 key_key.mute_microphone:key.keyboard.unknown:
 key_key.disable_voice_chat:key.keyboard.unknown:
 key_key.hide_icons:key.keyboard.unknown:
 key_key.voice_chat:key.keyboard.comma:
 key_key.voice_chat_settings:key.keyboard.period:
-key_key.voice_chat_group:key.keyboard.g:
+key_key.voice_chat_group:key.keyboard.unknown:
 key_key.voice_chat_toggle_recording:key.keyboard.unknown:
 key_key.voice_chat_adjust_volumes:key.keyboard.unknown:
 key_key.trade_cycling.cycle_trades:key.keyboard.unknown:

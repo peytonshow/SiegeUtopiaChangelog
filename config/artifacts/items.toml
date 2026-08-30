@@ -262,7 +262,7 @@
 	generateAsLoot = true
 	#The strength of the night vision effect applied by the Night Vision Goggles
 	#Range: 0.0 ~ 1.0
-	strength = 0.2
+	strength = 0.65
 
 [novelty_drinking_hat]
 	#How much the Novelty Drinking Hat increases the wearer's drinking speed

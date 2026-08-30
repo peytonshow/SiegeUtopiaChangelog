@@ -1,10 +1,14 @@
 {
-  "advancement.create.mechanical_pump_0.desc": "Place and power a Mechanical Fluid Pump",
-  "advancement.create.water_supply.desc": "Use the pulling end of a Fluid Pipe or Mechanical Fluid Pump to collect water",
-  "block.create.mechanical_pump": "Mechanical Fluid Pump",
+  "advancement.create_connected.control_chip.desc": "Assemble a Advanced Circuit",
+  "item.create_connected.control_chip": "Advanced Circuit",
+  "item.create_connected.incomplete_control_chip": "Incomplete Advanced Circuit",
+
+  "advancement.create.mechanical_pump_0.desc": "Place and power a Mechanical Fluid Pipe",
+  "advancement.create.water_supply.desc": "Use the pulling end of a Fluid Pipe or Mechanical Fluid Pipe to collect water",
+  "block.create.mechanical_pump": "Mechanical Fluid Pipe",
   "item.quark.bottled_cloud": "Bottle o' Sky",
   "block.farmersdelight.cutting_board": "Board",
-  "create_central_kitchen.recipe.farmersdelight.automatic_food_cutting": "Automatic Board Application",
+  "create_central_kitchen.recipe.farmersdelight.automatic_food_cutting": "Auto Board Application",
   "chat.type.advancement.challenge": "%s has completed %s",
   "chat.type.advancement.goal": "%s has reached %s",
   "chat.type.advancement.task": "%s has earned %s",
@@ -15,9 +19,9 @@
   "utopia.info.spices": "Spices are a good way to increase the saturation revieved from eating meats and sandwiches, but aren't a great food option on their own.",
   "utopia.info.catalyst": "Catalysts contain special living compounds that react with certain surrounding minerals on its surface.",//nf
   "utopia.info.tumbling": "Amethysts can be used to produce minerals through a process called tumbling. They slowly grind away rock to dust, which is absorbed by water and drained, leaving only metal or gems.",//nf
-  "utopia.info.fluid": "Infinite fluid can be achieved by using a Spout to suck up water from a a source",//nf
+  "utopia.info.fluid": "Commond fluids can be inflinitely pumped by using a Hose Pulley at pools of that liquid that are at least 10,000 blocks.",
   "utopia.info.platinum": "Platinum is an extremely rare resource, even rarer than gold. You wont find any just from mining, but you can occasionally wash up some specks from blowing gold. Platinum is the strongest material in terms of combat and tools, but is incredibly fragile.",
-  "utopia.info.gas": "Gasses can be safely spouted into the atmosphere using mechanical pumps, presumably with no long-term effects on the planet.", //nf
+  "utopia.info.gas": "Gasses act like liquid in many ways, but can't be physically placed anywhere.",
 
   "farmersdelight.tooltip.cooking_pot.empty": "Empty",
   "block.minecraft.blast_furnace": "Kiln",

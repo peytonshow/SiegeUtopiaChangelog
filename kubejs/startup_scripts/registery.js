@@ -10,7 +10,7 @@ ItemEvents.toolTierRegistry(event => {
   event.add('pencil', tier => {
     tier.uses = 20             // Durability
     tier.speed = 2.0                 // Mining speed (matters if they clear cobwebs/leaves)
-    tier.attackDamageBonus = 3.0     // Base damage bonus added to weapons
+    tier.attackDamageBonus = 2.0     // Base damage bonus added to weapons
     tier.enchantmentValue = 0       // Enchantability level
     //tier.repairIngredient = '#minecraft:coals' // Item used to fix it in an anvil (or '#c:gems/ruby')
   })
@@ -31,13 +31,15 @@ StartupEvents.registry('item', event => {
     event.create('utopia:incomplete_netherite_chestplate', 'create:sequenced_assembly').texture('utopia:item/incomplete_netherite_chestplate').displayName('Patchwork Netherite Chestplate')
     event.create('utopia:incomplete_netherite_leggings', 'create:sequenced_assembly').texture('utopia:item/incomplete_netherite_leggings').displayName('Patchwork Netherite Leggings')
     event.create('utopia:incomplete_netherite_boots', 'create:sequenced_assembly').texture('utopia:item/incomplete_netherite_boots').displayName('Patchwork Netherite Boots')
-    event.create('utopia:overworld_upgrade_template').displayName('Manufactured Template').texture('utopia:item/overworld_upgrade_template')
+    event.create('utopia:incomplete_circuit_board', 'create:sequenced_assembly').displayName('Incomplete Circuit').texture('utopia:item/incomplete_circuit_board')
 
+    event.create('utopia:overworld_upgrade_template').displayName('Manufactured Template').texture('utopia:item/overworld_upgrade_template')
     //event.create('utopia:catalyst').displayName('Catalyst').texture('utopia:item/catalyst').rarity('uncommon') USELESS! 
 
     event.create('utopia:uneven_raw_brass_precursor').displayName('Brass Precursor').texture('utopia:item/uneven_raw_brass_precursor')
 
     // Sciantest
+    event.create('utopia:garbage').displayName('Garbage').texture('utopia:item/garbage').tag('c:dusts').tag('utopia:chemistry')
     event.create('utopia:silica_dust').displayName('Silica Dust').texture('utopia:item/silica').tag('c:dusts').tag('utopia:chemistry')
     event.create('utopia:moissanite').displayName('Moissanite').texture('utopia:item/moissanite').tag('c:gems').tag('utopia:chemistry')
     event.create('utopia:beaker').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/beaker').displayName('Empty Beaker')
@@ -50,12 +52,12 @@ StartupEvents.registry('item', event => {
     event.create('utopia:beaker_propylene_glycol').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/propylene_glycol').displayName('Propylene Glycol').useAnimation('drink')
     event.create('utopia:ammonium_nitrate').tag('utopia:chemistry').texture('utopia:item/ammonium_nitrate').displayName('Ammonium Nitrate')
     event.create('utopia:pure_sulfur').tag('utopia:chemistry').texture('utopia:item/sulphur').displayName('Sulfur Dust')
-    event.create('utopia:plastic_ingot').displayName('Plastic').texture('utopia:item/plastic')
+    // event.create('utopia:plastic_ingot').displayName('Plastic').texture('utopia:item/plastic') Not sure on this. Might die
 
     // Electricity
     //event.create('utopia:battery_charged').displayName('Graphite').texture('utopia:item/graphite_ingot')
     event.create('utopia:wire').displayName('Wire').texture('utopia:item/wire')
-    event.create('utopia:circuit').displayName('Circuit').texture('utopia:item/circuit_board')
+    event.create('utopia:circuit').displayName('Simple Circuit').texture('utopia:item/circuit_board')
 
     // Ingots
     event.create('utopia:graphite_ingot').displayName('Graphite').texture('utopia:item/graphite_ingot').tag('c:ingots').tag('c:ingots/graphite')

@@ -13,16 +13,16 @@ glintSpeed:0.5
 glintStrength:0.75
 prioritizeChunkUpdates:0
 fullscreen:false
-gamma:1.0
+gamma:0.0
 graphicsMode:1
-guiScale:4
+guiScale:3
 maxFps:260
 mipmapLevels:1
 narrator:0
 particles:0
 reducedDebugInfo:false
-renderClouds:"false"
-renderDistance:8
+renderClouds:"true"
+renderDistance:30
 simulationDistance:6
 screenEffectScale:0.3732394366197183
 soundDevice:""
@@ -48,8 +48,8 @@ mouseSensitivity:0.5
 damageTiltStrength:1.0
 highContrast:false
 narratorHotkey:true
-resourcePacks:["vanilla","fabric","mod_resources","moonlight:merged_pack","builtin/add_pack_finders_test","scholar:colored_books","scholar:chiseled_bookshelf_colored_books","black_icons","file/Better Chainmail Armor.zip","file/BetterExp.zip","file/C4Music_v4.3.zip","file/CoffeeGUI_1.20.2-26.2_release_v2.2.1.zip","file/Enchantment Outlines.zip","file/Fresh Moves v3.1 (No Animated Eyes).zip","file/Gentler Weather Sounds 2.2.0.zip","file/Leather Robes - 1.21.1.zip","file/Mace Fusion 2.2.zip","file/ModdedCoffeeGUI_Release_v1.15.2.zip","file/Muskets 3D Wild West для Ewewkek\u0027s.zip","file/Quark VRO.zip","file/Xbox 360 Advancement SFX.zip","file/alpha_sounds_1.20.2-1.14.zip","file/crops-3d(2).zip","file/§8[HMI] Mars\u0027 Mining Animation.zip","file/§bArmor§8-§bReimagined§0_§8[v1.1]§0.zip","file/§b§lSpectator Xray §7v1.2.1.zip","file/§f[HMI] §4Hold§f My§9 Actions- 1.1.zip","file/§3Fresh §bWeapons \u0026 Tools.zip"]
-incompatibleResourcePacks:["file/BetterExp.zip","file/alpha_sounds_1.20.2-1.14.zip","file/crops-3d(2).zip","file/§8[HMI] Mars\u0027 Mining Animation.zip","file/§f[HMI] §4Hold§f My§9 Actions- 1.1.zip"]
+resourcePacks:["vanilla","fabric","mod_resources","moonlight:merged_pack","builtin/add_pack_finders_test","scholar:colored_books","scholar:chiseled_bookshelf_colored_books","black_icons","file/Better Chainmail Armor.zip","file/BetterExp.zip","file/C4Music_v4.3.zip","file/Enchantment Outlines.zip","file/Fresh Moves v3.1 (No Animated Eyes).zip","file/Gentler Weather Sounds 2.2.0.zip","file/Leather Robes - 1.21.1.zip","file/Mace Fusion 2.2.zip","file/ModdedCoffeeGUI_Release_v1.15.2.zip","file/Muskets 3D Wild West для Ewewkek\u0027s.zip","file/Quark VRO.zip","file/Xbox 360 Advancement SFX.zip","file/alpha_sounds_1.20.2-1.14.zip","file/§bArmor§8-§bReimagined§0_§8[v1.1]§0.zip","file/§b§lSpectator Xray §7v1.2.1.zip","file/Fancy Crops v1.3.zip","mod/oreganized:resourcepacks/create_compat","file/Atmospheric Skies \u0026 Fog 1.3.zip","file/Classic Grass 1.1-1.12.zip","file/CoffeeGUI_1.20.2-26.2_release_v2.2.1.zip","file/§3Fresh §bWeapons \u0026 Tools.zip"]
+incompatibleResourcePacks:["file/BetterExp.zip","file/alpha_sounds_1.20.2-1.14.zip","file/Classic Grass 1.1-1.12.zip"]
 lastServer:
 lang:en_us
 chatVisibility:0
@@ -137,6 +137,7 @@ key_key.astikorcartsredux.action:key.keyboard.r
 key_key.astikorcartsredux.slow:key.keyboard.z
 key_key.curios.open.desc:key.keyboard.unknown
 key_key.fast_placement:key.keyboard.unknown
+key_chunksfadein.keybinds.toggleMod:key.keyboard.unknown
 key_key.jei.toggleOverlay:key.keyboard.unknown
 key_key.jei.focusSearch:key.keyboard.unknown
 key_key.jei.previousPage:key.keyboard.unknown
@@ -165,6 +166,7 @@ key_key.jei.toggleEditMode:key.keyboard.unknown
 key_key.jei.toggleHideIngredient:key.keyboard.unknown
 key_key.jei.toggleWildcardHideIngredient:key.keyboard.unknown
 key_key.jei.recipeBack:key.keyboard.backspace
+key_key.jei.recipeForward:key.keyboard.unknown
 key_key.jei.previousRecipePage:key.keyboard.page.up
 key_key.jei.nextRecipePage:key.keyboard.page.down
 key_key.jei.pauseRecipeCycling:key.keyboard.left.shift

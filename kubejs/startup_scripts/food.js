@@ -67,6 +67,14 @@ ItemEvents.modification(event => {
             ]
         })
     })
+    event.modify('minecraft:melon_slice', item => {
+        item.setFood({
+            eatSeconds: 0.8,
+            saturation: 1,
+            nutrition: 1,
+            canAlwaysEat: false
+        })
+    })
     event.modify('minecraft:sweet_berries', item => {
         item.setFood({
             eatSeconds: 0.8,

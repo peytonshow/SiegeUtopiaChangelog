@@ -57,14 +57,6 @@
       "useCustomWeight": false,
       "customWeight": 5.0
     },
-    "irons_artifice:cowboy_hat": {
-      "useCustomWeight": false,
-      "customWeight": 11.0
-    },
-    "irons_artifice:tricorne": {
-      "useCustomWeight": false,
-      "customWeight": 11.0
-    },
     "minecraft:chainmail_boots": {
       "useCustomWeight": false,
       "customWeight": 1.0
@@ -205,6 +197,22 @@
       "useCustomWeight": true,
       "customWeight": 0.0
     },
+    "oreganized:silver_boots": {
+      "useCustomWeight": false,
+      "customWeight": 2.0
+    },
+    "oreganized:silver_chestplate": {
+      "useCustomWeight": false,
+      "customWeight": 6.0
+    },
+    "oreganized:silver_helmet": {
+      "useCustomWeight": false,
+      "customWeight": 2.0
+    },
+    "oreganized:silver_leggings": {
+      "useCustomWeight": false,
+      "customWeight": 5.0
+    },
     "quark:backpack": {
       "useCustomWeight": false,
       "customWeight": 0.0
@@ -268,6 +276,14 @@
     "utopia:used_shackles": {
       "useCustomWeight": true,
       "customWeight": 5.0
+    },
+    "irons_artifice:cowboy_hat": {
+      "useCustomWeight": false,
+      "customWeight": 11.0
+    },
+    "irons_artifice:tricorne": {
+      "useCustomWeight": false,
+      "customWeight": 11.0
     },
     "aeronautics:aviators_goggles": {
       "useCustomWeight": false,

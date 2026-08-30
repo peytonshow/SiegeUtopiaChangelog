@@ -54,17 +54,17 @@ MATERIAL PROGRESSION CHANGES
     * Diamond -> Mostly the same, not as enchantable. Sub-optimal enchantability.
     * Netherite -> Provides more protection on armor. Abysmal enchantability. Easier to gain scrap.
 * New Materials
-    * Electrum -> Doesn't suffer from weight-related speed penalties and increases movement speed. Tools do higher damage at higher speeds.
+    * Electrum -> (Oreganized) Doesn't suffer from weight-related speed penalties and increases base movement speed. Weapons and tools do higher damage at higher speeds.
+    * Siver -> (Oreganized) Equal to iron, but increases invincibility frames while worn.
     * Knight Armor -> Perfected Iron. Insane durability, and boosts the strength of nearby pets.
     * Platinum -> Platinum is a super rare mineral found by blowing crushed gold. It shares stats with Diamond, but struggles with durability. Platinum is mainly used as a Catalyst for certain racipes rather than tools due its rarity.
         
 -----------------------------------------------------------------------------------------------------------------
 
 COMBAT
-* In vanilla, you never needed to use anything but a sword to survive, which drowns out other means of combat.
-* Spears are less powerful, craftable tridents. Direct attacks are better than hands, but underwelming. Higher tier Spears (plus the vanilla trident) all have Loyalty 1 by default.
+* (Combat Nouveau) Shields raise instantly, swords have longer reach, swords instantly cut grass, snowballs, eggs, and potions stack higher, crits aren't wasted on miss, auto-attack, and more.
+* Limited 
 * Arrows have several new recipes added to incentivize bow usage.
-* Added several features from the mojang combat tests. Shields raise instantly, swords have longer reach, swords instantly cut grass, snowballs, eggs, and potions stack higher, crits aren't wasted on miss, and several more changes.
 
 -----------------------------------------------------------------------------------------------------------------
 
@@ -110,12 +110,12 @@ CRAFTING
 * Froglights and Naturalist's Froglass now have duplicating recipes for less tedious farming. D
 * Added sequenced recipes for netherite armor that don't require diamonds, but instead have a much higher netherite cost. (This shouldn't replace your first set of netherite armor, but it streamlines the process of getting a bunch of sets for your troops, or for backups. It may be more convinient to only farm for a handful of materials rather than the diamonds, netherite, gold + a template. It also requires a factory and a drill to (feasibly) get the most out of these recipes. This new Automation line uses Overworld templates and roughly 3~4 netherite ingots a pop.
 * Overworld Templates a new item obtained from superheated mixing. Overworld templates are used in multiple automation lines, specifically in terms of warfare (Mass production of Rifles and Netherite Armor) CON
-* Added Graphite, which is used to make Pencils. Pencils can be used to craft book and quills without ink sacs, and are needed to craft clipboards. Pencils can be used as weapons, dealing minor damage. Graphite has a 20% to be made when pressing Coal (Not charcoal!).
+* Added Graphite, which is used to make Moissanite and Pencils. Pencils can be used to craft book and quills without ink sacs, and are needed to craft clipboards. Pencils can be used as weapons, dealing devent damage. Graphite can be crafted by pressing Coal (Not charcoal!).
 
 
 CREATE
 * Drills now require crafting Moissanite as a core component. D
-* Removed Create Washing Gravel into iron. (Automation in this pack shouldn't be indefinite/infinite output from no input. Mining is a more important aspect of Minecraft than automating everything, even if thats what create aims to do. With minor tweaks create should serve to complement vanilla moreso than replace whole parts of it) D
+* Removed Create Washing Gravel into iron. (Automation in this pack shouldn't be indefinite/infinite output from no input for most items, especially ingots. Mining is a more important aspect of Minecraft than automating literally everything, even if thats what create aims to do. With minor tweaks create should serve to complement vanilla moreso than replace whole parts of it) D
 * Netherite Diving gear now has slighly less protection than Iron Armor rather than sharing stats with Netherite (The immortal netherite chestplate, for starters, was always really confusing to me because there was really no reason not to have one. It costs less than making a normal netherite chestplate for a permanent upgrade to your armor. You may not have noticed this originally, but you can literally just combine the copper pieces of armor with one netherite ingot and an upgrade template. As for the diving helmet, which is also a direct upgrade due to not requiring a diamond helmet, it combined with the backtank lets you breath under lava, undermining potions in the process. All in all, the netherite diving gear in create is kind of baffling to me.)
 * Removed Netherite Diving Gear recipe that uses diamond gear as a base. Now only the  + template + copper diving gear recipes remain, which explain the lower defense as it doesn't use diamond armor as a component.
 * Tripled Backtank S.U Storage.

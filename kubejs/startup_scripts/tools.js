@@ -58,37 +58,37 @@ ItemEvents.modification(event => {
 
     // Early tools
     event.modify('minecraft:wooden_spear', item => {
-        item.maxDamage = 5
+        item.maxDamage = 85
     })
     event.modify('minecraft:wooden_sword', item => {
-        item.maxDamage = 16
+        item.maxDamage = 86
     })
     event.modify('minecraft:wooden_axe', item => {
-        item.maxDamage = 22
+        item.maxDamage = 92
     })
     event.modify('minecraft:wooden_pickaxe', item => {
-        item.maxDamage = 18
+        item.maxDamage = 88
     })
     event.modify('minecraft:wooden_shovel', item => {
-        item.maxDamage = 20
+        item.maxDamage = 90
     })
     event.modify('minecraft:flint_and_steel', item => {
         item.maxDamage = 12
     })
     event.modify('minecraft:stone_spear', item => {
-        item.maxDamage = 5
+        item.maxDamage = 85
     })
     event.modify('minecraft:stone_sword', item => {
-        item.maxDamage = 16
+        item.maxDamage = 86
     })
     event.modify('minecraft:stone_axe', item => {
-        item.maxDamage = 22
+        item.maxDamage = 92
     })
     event.modify('minecraft:stone_pickaxe', item => {
-        item.maxDamage = 18
+        item.maxDamage = 88
     })
     event.modify('minecraft:stone_shovel', item => {
-        item.maxDamage = 20
+        item.maxDamage = 90
     })
 
 })

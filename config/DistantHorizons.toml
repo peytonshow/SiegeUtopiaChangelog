@@ -458,7 +458,7 @@ _version = 4
 		[client.advanced.graphics]
 			#
 			# Enable Screen Space Ambient Occlusion
-			enableSsao = true
+			enableSsao = false
 			#
 			# If true some vanilla graphics settings will be automatically changed 
 			# during DH setup to provide a better experience. 
@@ -538,7 +538,7 @@ _version = 4
 				#  overhangs or walls for floating objects. 
 				#  Tweaking the caveCullingHeight, can resolve some 
 				#  of those issues.
-				enableCaveCulling = true
+				enableCaveCulling = false
 				#
 				# At what Y value should cave culling start? 
 				# Lower this value if you get walls for areas with 0 light.
@@ -627,7 +627,7 @@ _version = 4
 				noiseDropoff = 1024
 				#
 				# How many steps of noise should be applied to LODs?
-				noiseSteps = 4
+				noiseSteps = 2
 				#
 				# How intense should the noise should be?
 				noiseIntensity = "0.05"
@@ -710,7 +710,7 @@ _version = 4
 				# 
 				# Fastest: CHUNK
 				# Fanciest: BLOCK
-				maxHorizontalResolution = "BLOCK"
+				maxHorizontalResolution = "TWO_BLOCKS"
 				#
 				# If true LODs will fade away as you get closer to them. 
 				# If false LODs will cut off abruptly at a set distance from the camera. 
