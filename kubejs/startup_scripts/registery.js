@@ -1,7 +1,7 @@
 ItemEvents.toolTierRegistry(event => {
   
   event.addBasedOnExisting("platinum", "netherite", (tier) => {
-    tier.uses = 150;
+    tier.uses = 155;
     tier.attackDamageBonus = tier.attackDamageBonus + 2.0
     tier.speed = tier.speed + 3.0
     tier.enchantmentValue = 40
@@ -39,9 +39,6 @@ StartupEvents.registry('item', event => {
     event.create('utopia:uneven_raw_brass_precursor').displayName('Brass Precursor').texture('utopia:item/uneven_raw_brass_precursor')
 
     // Sciantest
-    event.create('utopia:garbage').displayName('Garbage').texture('utopia:item/garbage').tag('c:dusts').tag('utopia:chemistry')
-    event.create('utopia:silica_dust').displayName('Silica Dust').texture('utopia:item/silica').tag('c:dusts').tag('utopia:chemistry')
-    event.create('utopia:moissanite').displayName('Moissanite').texture('utopia:item/moissanite').tag('c:gems').tag('utopia:chemistry')
     event.create('utopia:beaker').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/beaker').displayName('Empty Beaker')
     event.create('utopia:beaker_oxygen').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/beaker_oxygen').displayName('Beaker of Oxygen').useAnimation('drink')
     event.create('utopia:beaker_hydrogen').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/beaker_hydrogen').displayName('Beaker of Hydrogen').useAnimation('drink')
@@ -50,19 +47,23 @@ StartupEvents.registry('item', event => {
     event.create('utopia:beaker_nitric_acid').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/beaker_nitric_acid').displayName('Beaker of Nitric Acid').useAnimation('drink')
     event.create('utopia:beaker_bleach').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/bleach').displayName('Bleach').useAnimation('drink')
     event.create('utopia:beaker_propylene_glycol').tag('utopia:chemistry').tag('utopia:beakers').texture('utopia:item/propylene_glycol').displayName('Propylene Glycol').useAnimation('drink')
+    event.create('utopia:garbage').displayName('Garbage').texture('utopia:item/garbage').tag('c:dusts').tag('utopia:chemistry')
+    event.create('utopia:silica_dust').displayName('Silica Dust').texture('utopia:item/silica').tag('c:dusts').tag('utopia:chemistry')
+    event.create('utopia:moissanite').displayName('Moissanite').texture('utopia:item/moissanite').tag('c:gems').tag('utopia:chemistry')
     event.create('utopia:ammonium_nitrate').tag('utopia:chemistry').texture('utopia:item/ammonium_nitrate').displayName('Ammonium Nitrate')
     event.create('utopia:pure_sulfur').tag('utopia:chemistry').texture('utopia:item/sulphur').displayName('Sulfur Dust')
-    // event.create('utopia:plastic_ingot').displayName('Plastic').texture('utopia:item/plastic') Not sure on this. Might die
+    event.create('utopia:resin_ingot').tag('utopia:chemistry').texture('utopia:item/resin').displayName('Resin')
 
     // Electricity
     //event.create('utopia:battery_charged').displayName('Graphite').texture('utopia:item/graphite_ingot')
-    event.create('utopia:wire').displayName('Wire').texture('utopia:item/wire')
-    event.create('utopia:circuit').displayName('Simple Circuit').texture('utopia:item/circuit_board')
+    event.create('utopia:wire').displayName('Wire').texture('utopia:item/wire').tag('utopia:electricity')
+    event.create('utopia:wire_spool').displayName('Wire Spool').texture('utopia:item/wire_spool').tag('utopia:electricity').maxDamage(30).unstackable()
+    event.create('utopia:circuit').displayName('Simple Circuit').texture('utopia:item/circuit_board').tag('utopia:electricity')
 
     // Ingots
     event.create('utopia:graphite_ingot').displayName('Graphite').texture('utopia:item/graphite_ingot').tag('c:ingots').tag('c:ingots/graphite')
     event.create('utopia:platinum_ingot').displayName('Platinum Ingot').texture('utopia:item/platinum_ingot').tag('c:ingots').tag('c:ingots/platinum')
-    event.create('utopia:platinum_nugget').displayName('Platinum Nugget').texture('utopia:item/platinum_nugget')
+    event.create('utopia:platinum_nugget').displayName('Platinum Nugget').texture('utopia:item/platinum_nugget').tag('c:nuggets').tag('c:nuggets/platinum')
 
     // Copper tools.
     event.create('minecraft:copper_sword', 'sword').tier('stone').maxDamage(100)

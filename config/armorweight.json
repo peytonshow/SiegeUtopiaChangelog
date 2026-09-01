@@ -45,6 +45,10 @@
       "useCustomWeight": false,
       "customWeight": 5.3
     },
+    "create_things_and_misc:sticky_boots_boots": {
+      "useCustomWeight": false,
+      "customWeight": 3.5
+    },
     "endermanoverhaul:badlands_hood": {
       "useCustomWeight": false,
       "customWeight": 5.0

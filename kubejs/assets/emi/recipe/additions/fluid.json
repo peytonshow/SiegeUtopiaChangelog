@@ -2,7 +2,6 @@
   "type": "emi:info",
   "stacks": [
     "fluid:minecraft:water",
-    "fluid:streamsreflowing:stream",
     "item:minecraft:water_bucket",
     "fluid:minecraft:lava",
     "item:minecraft:lava_bucket"

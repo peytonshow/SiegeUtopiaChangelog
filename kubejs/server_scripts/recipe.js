@@ -274,24 +274,24 @@ ServerEvents.recipes(event => {
         'quark:bottled_cloud',
     ])
     event.recipes.create.mixing([
-        Fluid.of('utopia:propylene_glycol', 100)
+        Fluid.of('utopia:propylene_glycol', 1000)
     ], [
-        'minecraft:coal',
-        Fluid.of('utopia:hydrogen', 120),
-        Fluid.of('utopia:oxygen', 40)
+        '10x minecraft:coal',
+        Fluid.of('utopia:hydrogen', 600),
+        Fluid.of('utopia:oxygen', 400)
     ]).superheated()
     event.recipes.create.mixing([
-        Fluid.of('utopia:oxygen', 80),
-        Fluid.of('utopia:hydrogen', 120)
+        Fluid.of('utopia:oxygen', 200),
+        Fluid.of('utopia:hydrogen', 400)
     ], [
-        Fluid.of('minecraft:water', 200),
-        'create:experience_nugget'
+        Fluid.of('minecraft:water', 600),
+        '3x create:experience_nugget'
     ]).heated()
     event.recipes.create.mixing([
         'utopia:ammonium_nitrate'
     ], [
-        Fluid.of('utopia:ammonia', 500),
-        Fluid.of('utopia:nitric_acid', 500)
+        Fluid.of('utopia:ammonia', 600),
+        Fluid.of('utopia:nitric_acid', 600)
     ]).heated()
 
     event.recipes.create.mixing([
@@ -306,7 +306,7 @@ ServerEvents.recipes(event => {
     ], [
         'oreganized:electrum_nugget',
         '16x quark:bottled_cloud',
-        Fluid.of('utopia:propylene_glycol', 500)
+        Fluid.of('utopia:propylene_glycol', 600)
     ]).processingTime(6000)
     event.recipes.create.mixing([
         Fluid.of('utopia:bleach', 200)
@@ -314,7 +314,7 @@ ServerEvents.recipes(event => {
         'utopia:sea_salt',
         Fluid.of('minecraft:water', 200),
         'create:experience_nugget'
-    ]).heated().processingTime(140)
+    ]).heated().processingTime(300)
     event.recipes.create.mixing([
         Fluid.of('utopia:ammonia', 400)
     ], [
@@ -344,6 +344,19 @@ ServerEvents.recipes(event => {
         'minecraft:blue_ice',
         'minecraft:heart_of_the_sea'
     ]).heated()
+    event.recipes.create.mixing([
+        CreateItem.of('utopia:resin_ingot')
+    ], [
+        'utopia:silica_dust',
+        Fluid.of('utopia:propylene_glycol', 400),
+        Fluid.of('utopia:nitric_acid', 200)
+    ]).heated().processingTime(400)
+    event.recipes.create.mixing([
+        CreateItem.of('utopia:garbage')
+    ], [
+        Fluid.of('utopia:propylene_glycol', 1000),
+        Fluid.of('utopia:nitric_acid', 1000)
+    ]).processingTime(200)
 
     // Lava
     event.recipes.create.mixing([

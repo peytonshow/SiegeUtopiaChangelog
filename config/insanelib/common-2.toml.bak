@@ -6,6 +6,10 @@
 "Enable Fixes" = true
 #Apply attribute modifiers to players. Attributes can be added in the config folder of this feature's folder (requires a world to be opened at least once). Updating attribute modifiers of players them to rejoin
 "Enable Player attributes" = true
+#Adds a new `insanelib:mob_detection_range` attribute to living entities (-Double.MAX_VALUE~1, default 0), that reduces (negative values) or increases (positive values) in percentage the range at which other entities can detect/see them. Hooks into LivingVisibilityEvent with LOWEST priority so it modifies the final visibility value.
+"Enable Mob detection range" = true
+#Add item tooltips via item tags. Items in the insanelib:has_tooltip item tag get a tooltip with the vanilla name + .tooltip (e.g. item.minecraft.arrow.tooltip). Items in insanelib:has_hidden_tooltip get the same tooltip, but only shown while holding SHIFT.
+"Enable Item tooltips" = true
 
 #Changes the behaviour of Falling Blocks to be smarter by preventing them from getting stuck when landing on a block but their center has air below, or try to stack or move them when inside a block.
 ["Better falling blocks"]
@@ -45,3 +49,13 @@
 #Set and use some tags to get and set some mobs properties. E.g. cause fire explosion for mobs, or get current light level.
 ["Nbt tags"]
 	"Apply no ammo consumption to pillagers" = false
+
+#Allows modifying item data components via data packs
+["Item components"]
+	#Vanilla limits max stack sizes to 99 for some reasons. This replaces that limit
+	# Default: 9999
+	# Range: > -2147483648
+	"Stack limit" = 9999
+	"Disable shrink stack count" = false
+	#Always render the item stack count at a smaller scale, even when it's 99 or below
+	"Always shrink stack count" = false

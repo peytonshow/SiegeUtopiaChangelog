@@ -1,11 +1,11 @@
 #Common
 [common]
+	#Pillagers have a chance to spawn with a lead bolt in their offhand
+	pillagerSpawnWithBolts = false
 	#Should lead poisoning events give just Poison instead of Brain Damage?
 	poisonInsteadOfBrainDamage = false
 	#Should lead ore spawn dust clouds when broken without adjacent water?
 	leadDustCloud = true
-	#Pillagers have a chance to spawn with a lead bolt in their offhand
-	pillagerSpawnWithBolts = true
 	#The scribe is able to silk-touch pickaxe-related blocks
 	scribeSilkTouchStone = true
 	#Time in ticks molten lead waits until flowing downwards
