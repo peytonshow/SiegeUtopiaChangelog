@@ -42,10 +42,10 @@ StartupEvents.modifyCreativeTab('minecraft:food_and_drinks', event => {
     event.addAfter('minecraft:cooked_rabbit',['utopia:seasoned_cooked_rabbit'])
 })
 
-StartupEvents.modifyCreativeTab('minecraft:ingrediants', event => {
+StartupEvents.modifyCreativeTab('minecraft:ingredients', event => {
     event.addAfter('minecraft:lapis_lazuli',['utopia:graphite_ingot'])
     event.addAfter('minecraft:lapis_lazuli',['utopia:moissanite'])
     event.addAfter('oreganized:silver_ingot',['utopia:platinum_ingot'])
-    event.addAfter('minecraft:clay_ball',['utopia:silica_dust'])
+    event.addAfter('minecraft:clay_ball',['utopia:silica_dust, utopia:resin_ingot'])
     event.addAfter('minecraft:experience_bottle',['quark:cloud'])
 })

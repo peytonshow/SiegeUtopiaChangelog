@@ -1,0 +1,9 @@
+{
+  "parent": "utopia:item/wire_spool_full",
+  "overrides": [
+    { "predicate": { "damaged": 1, "damage": 0.25 }, "model": "utopia:item/wire_spool_75" },
+    { "predicate": { "damaged": 1, "damage": 0.50 }, "model": "utopia:item/wire_spool_50" },
+    { "predicate": { "damaged": 1, "damage": 0.75 }, "model": "utopia:item/wire_spool_25" },
+    { "predicate": { "damaged": 1, "damage": 0.99 }, "model": "utopia:item/wire_spool_empty" }
+  ]
+}

@@ -16,10 +16,10 @@
   "utopia.info.campfire_normal": "Campfires can be built manually with Firewood, a piece of coal and a light. Campfires can also be built using a Firecharge in a crafting table.",
   "utopia.info.campfire_nether": "Soul Campfires can be built manually with Firewood, a piece of soul sand and a light. Soul Campfires can also be built using a Firecharge in a crafting table.",
   "utopia.info.mimic": "Mimics are capable of being Re-summoned to reroll artifacts dropped by them.",
-  "utopia.info.spices": "Spices are a good way to increase the saturation revieved from eating meats and sandwiches, but aren't a great food option on their own.",
+  "utopia.info.spices": "Spices are a good way to increase the saturation received from eating meats and sandwiches, but aren't great on their own.",
   "utopia.info.catalyst": "Catalysts contain special living compounds that react with certain surrounding minerals on its surface.",//nf
   "utopia.info.tumbling": "Amethysts can be used to produce minerals through a process called tumbling. They slowly grind away rock to dust, which is absorbed by water and drained, leaving only metal or gems.",//nf
-  "utopia.info.fluid": "Commond fluids can be inflinitely pumped by using a Hose Pulley at pools of that liquid that are at least 10,000 blocks.",
+  "utopia.info.fluid": "Common fluids can be infinitely pumped by using a Hose Pulley to drain from pools of that liquid that are at least 10,000 blocks in size total.",
   "utopia.info.platinum": "Platinum is an extremely rare resource, even rarer than gold. You wont find any just from mining, but you can occasionally wash up some specks from blowing gold. Platinum is the strongest material in terms of combat and tools, but is incredibly fragile.",
   "utopia.info.gas": "Gasses act like liquid in many ways, but can't be physically placed anywhere.",
 

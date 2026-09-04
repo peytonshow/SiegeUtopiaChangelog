@@ -41,7 +41,7 @@
 	allowStonecuttingOnSaw = true
 	#.
 	#Allow Spouts to interact with Casting Tables and Basins from Tinkers' Construct.
-	allowCastingBySpout = true
+	allowCastingBySpout = false
 	#.
 	#Display vanilla Log-stripping interactions in JEI.
 	displayLogStrippingRecipes = true

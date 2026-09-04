@@ -32,10 +32,9 @@ StartupEvents.registry('item', event => {
     event.create('utopia:incomplete_netherite_leggings', 'create:sequenced_assembly').texture('utopia:item/incomplete_netherite_leggings').displayName('Patchwork Netherite Leggings')
     event.create('utopia:incomplete_netherite_boots', 'create:sequenced_assembly').texture('utopia:item/incomplete_netherite_boots').displayName('Patchwork Netherite Boots')
     event.create('utopia:incomplete_circuit_board', 'create:sequenced_assembly').displayName('Incomplete Circuit').texture('utopia:item/incomplete_circuit_board')
+    event.create('utopia:incomplete_wire_spool', 'create:sequenced_assembly').displayName('Incomplete Wire Spool').texture('utopia:item/incomplete_wire_spool').tag('c:hidden_from_recipe_viewers').unstackable()
 
     event.create('utopia:overworld_upgrade_template').displayName('Manufactured Template').texture('utopia:item/overworld_upgrade_template')
-    //event.create('utopia:catalyst').displayName('Catalyst').texture('utopia:item/catalyst').rarity('uncommon') USELESS! 
-
     event.create('utopia:uneven_raw_brass_precursor').displayName('Brass Precursor').texture('utopia:item/uneven_raw_brass_precursor')
 
     // Sciantest
@@ -52,12 +51,12 @@ StartupEvents.registry('item', event => {
     event.create('utopia:moissanite').displayName('Moissanite').texture('utopia:item/moissanite').tag('c:gems').tag('utopia:chemistry')
     event.create('utopia:ammonium_nitrate').tag('utopia:chemistry').texture('utopia:item/ammonium_nitrate').displayName('Ammonium Nitrate')
     event.create('utopia:pure_sulfur').tag('utopia:chemistry').texture('utopia:item/sulphur').displayName('Sulfur Dust')
-    event.create('utopia:resin_ingot').tag('utopia:chemistry').texture('utopia:item/resin').displayName('Resin')
 
     // Electricity
     //event.create('utopia:battery_charged').displayName('Graphite').texture('utopia:item/graphite_ingot')
+    event.create('utopia:resin_ingot').tag('utopia:chemistry').texture('utopia:item/resin').displayName('Resin')
     event.create('utopia:wire').displayName('Wire').texture('utopia:item/wire').tag('utopia:electricity')
-    event.create('utopia:wire_spool').displayName('Wire Spool').texture('utopia:item/wire_spool').tag('utopia:electricity').maxDamage(30).unstackable()
+    event.create('utopia:wire_spool').displayName('Wire Spool').texture('utopia:item/wire_spool').tag('utopia:electricity').maxDamage(60).unstackable()
     event.create('utopia:circuit').displayName('Simple Circuit').texture('utopia:item/circuit_board').tag('utopia:electricity')
 
     // Ingots
@@ -178,7 +177,7 @@ StartupEvents.registry('block', event => {
   //   .renderType('translucent')
   //   .notSolid()
   //   .fullBlock(false)
-  event.create('utopia:iodide_salt_lamp') 
+  event.create('utopia:sea_salt_lamp') 
     .displayName('Salt Lamp')
     .soundType('glass') 
     .hardness(3) 
@@ -189,7 +188,7 @@ StartupEvents.registry('block', event => {
     .fullBlock(false)
 
 event.create('utopia:moissanite_block')
-    .displayName('Moissanite Block')
+    .displayName('Block of Moissanite')
     .soundType('metal')
     .hardness(5.0)
     .resistance(6.0)

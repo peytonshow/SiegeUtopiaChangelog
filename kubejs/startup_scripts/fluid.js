@@ -72,7 +72,7 @@ StartupEvents.registry('fluid', event => {
       .renderType(3)
       .fallDistanceModifier(0)
     )
-    .stillTexture('kubejs:block/thin_fluid_still').flowingTexture('kubejs:block/thin_fluid_flow')
+    .stillTexture('kubejs:block/watery_still').flowingTexture('kubejs:block/watery_flow')
     .translucent()
     .noBlock()
     .noBucket()
@@ -87,11 +87,13 @@ StartupEvents.registry('fluid', event => {
       .renderType(3)
       .fallDistanceModifier(0)
     )
-    .stillTexture('kubejs:block/soupy_still').flowingTexture('kubejs:block/soupy_flow')
+    .stillTexture('kubejs:block/watery_still').flowingTexture('kubejs:block/watery_flow')
     .translucent()
     .levelDecreasePerBlock(2)
     .slopeFindDistance(2)
     .tickRate(10)
+    .bucketItem
+      .texture('utopia:item/bleach_bucket')
 
 
   event.create('utopia:glue')
@@ -108,6 +110,8 @@ StartupEvents.registry('fluid', event => {
     .levelDecreasePerBlock(4)
     .slopeFindDistance(2)
     .tickRate(30)
+    .bucketItem
+      .texture('utopia:item/glue_bucket')
 
   event.create('utopia:propylene_glycol')
     .slopeFindDistance(2)

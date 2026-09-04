@@ -1,18 +1,18 @@
 ServerEvents.recipes(event => {
 
     event.remove({ input: 'minecraft:gravel', type: 'create:splashing' })
+    event.remove({ input: 'minecraft:sugar_cane', output: 'minecraft:sugar'})
+    event.remove({ input: Ingredient.of('#c:cobblestones'), type: 'create:mixing', output: Fluid.of('minecraft:lava'),})
     event.remove({ output: 'oreganized:glance' })
     event.remove({ output: 'create:brass_ingot', type: 'create:mixing' })
     event.remove({ output: 'minecraft:paper', type: 'minecraft:crafting_shaped' })
     event.remove({ output: 'minecraft:paper', type: 'minecraft:crafting_shapeless' })
-    event.remove({ input: 'minecraft:sugar_cane', output: 'minecraft:sugar'})
     event.remove({ output: 'minecraft:glass_bottle', type: 'minecraft:crafting_shaped' })
     event.remove({ output: 'minecraft:gold_nugget', type: 'create:splashing' })
     event.remove({ output: 'minecraft:mushroom_stew', type: 'minecraft:crafting_shapeless' })
     event.remove({ output: 'minecraft:beetroot_soup', type: 'minecraft:crafting_shapeless' })
     event.remove({ output: 'create:rose_quartz', type: 'create:mixing' })
     event.remove({ output: 'create:mechanical_drill' })
-    event.remove({ input: Ingredient.of('#c:cobblestones'), output: Fluid.of('minecraft:lava'),})
     event.remove({ output: 'oreganized:silver_nugget', type: 'create:splashing' })
     //////
 
@@ -92,21 +92,21 @@ ServerEvents.recipes(event => {
     event.recipes.create.mixing('create:brass_ingot', [
         'utopia:uneven_raw_brass_precursor'
     ]).heated()
-    event.recipes.create.splashing([CreateItem.of('create:crushed_raw_zinc', 0.9), CreateItem.of('create:crushed_raw_copper')], 'utopia:uneven_raw_brass_precursor')
+    event.recipes.create.splashing([CreateItem.of('create:crushed_raw_zinc'), CreateItem.of('create:crushed_raw_copper')], 'utopia:uneven_raw_brass_precursor')
 
-    event.recipes.create.milling(CreateItem.of('create:crushed_raw_copper', 0.85), [
-        'minecraft:raw_copper'], 100)
-    event.recipes.create.milling(CreateItem.of('create:crushed_raw_zinc', 0.85), [
-        'create:raw_zinc'], 100)
-    event.recipes.create.milling(CreateItem.of('create:crushed_raw_iron', 0.85), [
-        'minecraft:raw_iron'], 100)
-    event.recipes.create.milling(CreateItem.of('create:crushed_raw_gold', 0.85), [
-        'minecraft:raw_gold'], 100)
-    event.recipes.create.milling(CreateItem.of('create:crushed_raw_silver', 0.85), [
-        'oreganized:raw_silver'], 100)
-    event.recipes.create.milling(CreateItem.of('create:crushed_raw_lead', 0.85), [
-        'oreganized:raw_lead'], 100)
-    event.recipes.create.milling(CreateItem.of('3x oreganized:refined_asbestos', 0.85), [
+    event.recipes.create.milling(CreateItem.of('create:crushed_raw_copper'), [
+        'minecraft:raw_copper'], 200)
+    event.recipes.create.milling(CreateItem.of('create:crushed_raw_zinc'), [
+        'create:raw_zinc'], 200)
+    event.recipes.create.milling(CreateItem.of('create:crushed_raw_iron'), [
+        'minecraft:raw_iron'], 200)
+    event.recipes.create.milling(CreateItem.of('create:crushed_raw_gold'), [
+        'minecraft:raw_gold'], 200)
+    event.recipes.create.milling(CreateItem.of('create:crushed_raw_silver'), [
+        'oreganized:raw_silver'], 200)
+    event.recipes.create.milling(CreateItem.of('create:crushed_raw_lead'), [
+        'oreganized:raw_lead'], 200)
+    event.recipes.create.milling(CreateItem.of('3x oreganized:refined_asbestos'), [
         'oreganized:raw_asbestos'], 100)
     event.recipes.create.crushing(CreateItem.of('3x oreganized:refined_asbestos'), [
         'oreganized:raw_asbestos'], 100)
@@ -276,10 +276,11 @@ ServerEvents.recipes(event => {
     event.recipes.create.mixing([
         Fluid.of('utopia:propylene_glycol', 1000)
     ], [
-        '10x minecraft:coal',
+        '5x minecraft:coal',
         Fluid.of('utopia:hydrogen', 600),
-        Fluid.of('utopia:oxygen', 400)
-    ]).superheated()
+        Fluid.of('utopia:oxygen', 400),
+        '5x minecraft:charcoal'
+    ]).heated()
     event.recipes.create.mixing([
         Fluid.of('utopia:oxygen', 200),
         Fluid.of('utopia:hydrogen', 400)
@@ -345,12 +346,13 @@ ServerEvents.recipes(event => {
         'minecraft:heart_of_the_sea'
     ]).heated()
     event.recipes.create.mixing([
-        CreateItem.of('utopia:resin_ingot')
+        CreateItem.of('2x utopia:resin_ingot'),
+        CreateItem.of('utopia:resin_ingot', 0.10)
     ], [
-        'utopia:silica_dust',
+        'oreganized:refined_asbestos',
         Fluid.of('utopia:propylene_glycol', 400),
-        Fluid.of('utopia:nitric_acid', 200)
-    ]).heated().processingTime(400)
+        Fluid.of('utopia:nitric_acid', 400)
+    ]).heated().processingTime(600)
     event.recipes.create.mixing([
         CreateItem.of('utopia:garbage')
     ], [
@@ -389,7 +391,7 @@ ServerEvents.recipes(event => {
 
     // Exp Farm
     event.recipes.create.compacting([
-        CreateItem.of('create:experience_nugget', 0.25),
+        CreateItem.of('2x create:experience_nugget', 0.35),
         CreateItem.of('create:experience_nugget', 0.25),
         '4x minecraft:stone_bricks'
     ], [
@@ -444,7 +446,7 @@ ServerEvents.recipes(event => {
       [
         event.recipes.create.deploying('utopia:incomplete_circuit_board', ['utopia:incomplete_circuit_board', 'create:copper_sheet']),
         event.recipes.create.filling('utopia:incomplete_circuit_board', ['utopia:incomplete_circuit_board', Fluid.of('utopia:nitric_acid', 50)]),
-        event.recipes.create.deploying('utopia:incomplete_circuit_board', ['utopia:incomplete_circuit_board', 'utopia:wire']),
+        event.recipes.create.deploying('utopia:incomplete_circuit_board', ['utopia:incomplete_circuit_board', 'utopia:wire_spool']),
         event.recipes.create.deploying('utopia:incomplete_circuit_board', ['utopia:incomplete_circuit_board', 'create:electron_tube']),
         event.recipes.create.pressing('utopia:incomplete_circuit_board', 'utopia:incomplete_circuit_board'),
       ]
@@ -452,13 +454,33 @@ ServerEvents.recipes(event => {
     .transitionalItem('utopia:incomplete_circuit_board')
     .loops(2)
 
+        event.recipes.create.sequenced_assembly(
+      // Outputs:
+      [
+        
+        CreateItem.of('utopia:wire_spool'),
+      ],
+      // Input:
+        Ingredient.of('#minecraft:wooden_slabs'), 
+      // Sequence:
+      [
+        event.recipes.create.deploying('utopia:incomplete_wire_spool', ['utopia:incomplete_wire_spool', 'utopia:wire']),
+        event.recipes.create.deploying('utopia:incomplete_wire_spool', ['utopia:incomplete_wire_spool', 'utopia:wire']),
+        event.recipes.create.deploying('utopia:incomplete_wire_spool', ['utopia:incomplete_wire_spool', 'utopia:wire']),
+        event.recipes.create.deploying('utopia:incomplete_wire_spool', ['utopia:incomplete_wire_spool', 'utopia:wire']),
+        event.recipes.create.deploying('utopia:incomplete_wire_spool', ['utopia:incomplete_wire_spool', 'utopia:wire'])
+      ]
+    )
+    .transitionalItem('utopia:incomplete_wire_spool')
+    .loops(10)
+
     event.shaped(
-        Item.of('utopia:wire', 6), [
-        'BAB',
-        'BAB',
-        'BAB'
+        Item.of('utopia:wire', 32), [
+        'BBB',
+        'AAA',
+        'BBB'
     ], {
-        A: 'create:copper_nugget',
-        B: 'oreganized:refined_asbestos'
+        A: '#utopia:conductive_material',
+        B: 'utopia:resin_ingot'
     })
 })

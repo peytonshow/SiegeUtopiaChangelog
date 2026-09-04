@@ -63,6 +63,12 @@ ServerEvents.tags('item', event => {
     event.add('utopia:circuitry', 'utopia:circuit')
     event.add('utopia:circuitry', 'create_connected:control_chip')
 
+    event.add('utopia:conductive_material', [
+            'minecraft:copper_ingot',
+            'minecraft:gold_ingot'
+    ] )
+    event.add('utopia:conductive_material', )
+
     event.add('utopia:rare_templates', 'minecraft:netherite_upgrade_smithing_template')
     event.add('utopia:rare_templates', 'oreganized:electrum_upgrade_smithing_template')
     event.add('utopia:rare_templates', 'musketmod:musket_upgrade_smithing_template')
